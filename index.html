@@ -1,618 +1,440 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - Graphic Designer & Visual Storyteller</title>
-	<meta name="description" content="An award-winning visual storyteller with 8+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/powerpoint.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">         
+    <meta name="description"
+        content="Minh-Ha Le - award-winning Senior Graphic Designer and Visual Communications Specialist. Branding, executive presentations, infographics, and digital campaigns.">
+    <title>Minh-Ha Le | Senior Graphic Designer & Visual Communications</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Homepage-only enhancements: keeps the existing shared styles.css unchanged. */
+        .project-cover {
+            overflow: hidden
+        }
 
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/powerpoint.jpg">
-	<!-- end: Facebook Open Graph -->
+        .project-cover {
+            background: #edf3f7;
+            border-radius: 7px;
+            height: 310px
+        }
 
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/graphic-designer/img/powerpoint.jpg">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/">
+        .project-cover img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform .35s ease
+        }
 
+        .project:hover .project-cover img {
+            transform: scale(1.035)
+        }
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .project-cover:has(img) {
+            display: block
+        }
 
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
+        .project:focus-visible .project-cover {
+            outline: 3px solid #27678f;
+            outline-offset: 3px
+        }
 
+        .interactive-thumb {
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            background: linear-gradient(125deg, #0b2844, #225d81);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between
+        }
 
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
+        .interactive-thumb>span,
+        .interactive-thumb small {
+            font-size: 10px;
+            letter-spacing: .18em;
+            font-weight: 700
+        }
 
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
+        .interactive-thumb strong {
+            font-size: clamp(24px, 3vw, 36px);
+            line-height: 1.05;
+            letter-spacing: -.04em
+        }
 
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
+        .interactive-bars {
+            display: flex;
+            align-items: end;
+            gap: 12px;
+            height: 78px;
+            width: 90%;
+            border-bottom: 1px solid #a5cde4
+        }
 
-		@keyframes float {
+        .interactive-bars i {
+            display: block;
+            flex: 1;
+            background: #7ebbdc;
+            height: 45%
+        }
 
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
+        .interactive-bars i:nth-child(2) {
+            height: 80%
+        }
 
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
+        .interactive-bars i:nth-child(3) {
+            height: 54%
+        }
 
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
+        .interactive-bars i:nth-child(4) {
+            height: 92%
+        }
 
-		@keyframes pulse-glow {
+        .interactive-bars i:nth-child(5) {
+            height: 64%
+        }
 
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
+        .interactive-bars i:nth-child(6) {
+            height: 35%
+        }
 
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
+        .interactive-bars i:nth-child(7) {
+            height: 70%
+        }
 
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
+        @media(max-width:850px) {
+            .project-cover {
+                height: 260px
+            }
+        }
 
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
+        @media(prefers-reduced-motion:reduce) {
+            .project-cover img {
+                transition: none
+            }
+        }
 
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
+        /* Portrait hero: tailored to the existing homepage layout */
+        .hero-inner {
+            grid-template-columns: minmax(0, 1.13fr) minmax(0, .87fr);
+            gap: clamp(30px, 5vw, 75px)
+        }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
+        .hero-portrait {
+            margin: 40px 0 40px auto;
+            width: 100%;
+            max-width: 425px;
+            position: relative
+        }
 
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
+        .portrait-frame {
+            aspect-ratio: 4/4.65;
+            overflow: hidden;
+            border-radius: 10px 10px 3px 3px;
+            background: #e2eaf2;
+            box-shadow: 0 24px 58px rgba(16, 43, 71, .16);
+            position: relative
+        }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
+        .portrait-frame:after {
+            content: "";
+            position: absolute;
+            inset: auto 0 0;
+            height: 19%;
+            background: linear-gradient(transparent, rgba(16, 43, 71, .13));
+            pointer-events: none
+        }
 
-		.btn-hover-effect {
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
+        .portrait-frame img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: 50% 22%
+        }
 
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
-		}
+        .hero-portrait figcaption {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-top: 18px;
+            color: #102b47;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .11em
+        }
 
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-			transition: left 0.5s;
-		}
+        .portrait-caption-rule {
+            width: 32px;
+            height: 2px;
+            background: #27678f;
+            flex: none
+        }
 
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-	</style>
+        .hero-portrait figcaption small {
+            display: block;
+            color: #62798b;
+            font-size: 9px;
+            letter-spacing: .16em;
+            font-weight: 650;
+            margin-top: 3px
+        }
 
+        @media(max-width:850px) {
+            .hero-inner {
+                grid-template-columns: 1fr
+            }
+
+            .hero-portrait {
+                margin: 0 auto 48px;
+                max-width: 370px
+            }
+
+            .portrait-frame {
+                aspect-ratio: 4/4.3
+            }
+        }
+
+        @media(max-width:600px) {
+            .hero-portrait {
+                max-width: 330px;
+                margin-bottom: 36px
+            }
+
+            .hero-copy {
+                padding-bottom: 25px
+            }
+        }
+    </style>
 </head>
 
-<body class="fixed-header fixed-footer">
-
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="index.html" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>				
-		
-				<li>
-					<a href="#">Main page</a>
-					<ul>
-				<li><a href="northstar-technologies.html">Northstar Technologies</a></li>
-				<li><a href="branding.html">Branding</a></li>
-				<li><a href="ebooks.html">Ebooks</a></li>				
-				<li><a href="graphics.html">Graphics</a></li>				
-				<li><a href="infographics.html">Infographics</a></li>
-				<li><a href="interactive.html">Interactive</a></li>
-				<li><a href="logo.html">Logo</a></li>
-				<li><a href="maps.html">Maps</a></li>
-				<li><a href="newsletters.html">Newsletters</a></li>
-				<li><a href="powerpoint.html">PowerPoint</a></li>
-				<li><a href="social-media.html">Social Media</a></li>
-				<li><a href="video-animation.html">Video Animation</a></li>
-					</ul>
-				</li>
-				<li><a href="#awards">Awards</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital UI/UX Designer</a></li>
-				<li><a href="https://minhhale.github.io/" target="_blank">Web Development</a></li>		
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-	<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-		<!-- /Scroll Down Line -->
-		 
-		<!-- About -->
-		<section class="about">
-
-			<div class="col-lg-4">
-				<img src="img/minhha.jpg" alt="minhha"
-					style="width:400px; border-radius: 50%; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-			</div>
-
-			<div class="col-lg-8">
-				<h3>Hi, I am
-					<span class="bold" style="color:yellow">Minh-Ha Le</span>
-				</h3>
-					<p>I’m an <strong>award-winning visual communications designer and storyteller</strong> with 18+ years of experience transforming complex ideas, data, and information into clear, engaging visual experiences.</p>
-
-					<p>From <strong>brand systems, infographics, and data visualization to digital experiences and executive presentations</strong>, I create thoughtful, accessible designs that make information easier to understand and stories more impactful.</p>
-
-					<p>Skilled in <strong>Adobe Creative Cloud, Figma, PowerPoint, Canva, Flourish, Datawrapper, and Mapbox</strong>, I combine </strong>visual storytelling, user-centered design, accessibility, and AI-enhanced creative workflows</strong> to create meaningful experiences across digital, print, and presentation platforms.</p>
-
-					<p>I especially recommend <strong>“visual communications designer and storyteller”</strong> instead of only “visual storyteller.” It positions you more clearly for the Visual Communications, Senior Graphic Designer, Presentation Designer, and Digital Communications roles you're targeting while still covering the breadth of your portfolio.</p>
-			</div>
-
-
-			</div>
-		</section>
-		<!-- /About -->
-
-
-
-		<!-- Blog Section -->
-		<section class="bg-light pb-6">
-
-			<!-- Blog -->
-			<div class="masonry blog" data-gutter="30" data-columns="3">
-
-				<!-- Item -->
-				<article>
-					<a href="northstar-technologies.html">
-						<img src="img/brand-presentation.jpg" alt="Northstar Technologies">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="northstar-technologies.html">Northstar Technologies</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->				
-					 				
-				<!-- Item -->
-				<article>
-					<a href="video-animation.html">
-						<img src="img/video-animation.jpg" alt="Video Animation">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="video-animation.html">Video Animation</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-				<!-- Item -->
-				<article>
-					<a href="powerpoint.html">
-						<img src="img/powerpoint.jpg" alt="PowerPoint Presentation">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="powerpoint.html">PowerPoint Presentation</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-
-				<!-- Item -->
-				<article>
-					<a href="social-media.html">
-						<img src="img/social-media.jpg" alt="Social Media Graphics">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="social-media.html">Social Media Graphics</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-								
-
-				<!-- Item -->
-				<article>
-					<a href="infographics.html">
-						<img src="img/infographic.png" alt="infographic">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="infographics.html">Infographic - Designing Clarity from Complexity</a>
-						</h5>
-
-					</div>
-				</article>
-				<!-- /Item -->
-
-				<!-- Item -->
-				<article>
-					<a href="logo.html">
-						<img src="img/logos.jpg" alt="Logos - Crafting Distinctive Brand Identities">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="logo.html">Logos - Crafting Distinctive Brand Identities</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-				<!-- Item -->
-				<article>
-					<a href="branding.html">
-						<img src="img/branding.jpg" alt="Branding & Newsletter Design">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="branding.html">Branding & Newsletter Design</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-				
-				<!-- Item -->
-				<article>
-					<a href="newsletters.html">
-						<img src="img/newsletter.png" alt="newsletter">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="newsletters.html">Newsletter & Email Campaign</a>
-						</h5>
-				</article>
-				<!-- /Item -->
-				
-				<!-- Item -->
-				<article>
-					<a href="graphics.html">
-						<img src="img/graphic.png" alt="Turning Data Into Compelling Visuals">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="graphics.html">Graphic - Turning Data Into Compelling Visuals</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-				<!-- Item -->
-				<article>
-					<a href="maps.html">
-						<img src="img/map.png" alt="Turning Data Into Compelling Visuals">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="maps.html">Transforming Complex Data into Engaging Maps</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-
-				<!-- Item -->
-				<article>
-					<a href="ebooks.html">
-						<img src="img/ebook.jpg" alt="Digital Books & Storytelling">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="ebooks.html">Digital Books & Storytelling</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-
-				<!-- Item -->
-				<article>
-					<a href="interactive.html">
-						<img src="img/interactive.png" alt="interactive">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="interactive.html">Interactive Maps & Charts for Impactful Stories</a>
-						</h5>
-
-					</div>
-				</article>
-				<!-- /Item -->
-
-			
-				<!-- Item -->
-				<article>
-					<a href="https://minhhale.github.io/digital-designer/">
-						<img src="img/digital-designer.png" alt="UI/UX and Web Designer">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="https://minhhale.github.io/digital-designer/">Digital Designer (UI/UX, Web
-								Designer)</a>
-						</h5>
-					</div>
-				</article>
-				<!-- /Item -->
-				
-				<!-- Item -->
-				<article>
-					<a href="https://minhhale.github.io/" target="_blank">
-						<img src="img/web-portfolio.png" alt="newsletter">
-					</a>
-					<div class="details">
-						<h5 class="bold uppercase">
-							<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-						</h5>
-						<p style="color: #000;">My role: Web Designer - Development </p>
-					</div>
-				</article>
-				<!-- /Item -->
-
-
-			</div>
-			<!-- /Blog -->
-
-		</section>
-		<!-- /Blog Section -->
-
-
-		<!-- Experience -->
-		<section id="awards" data-background="#003566">
-			<div class="container text-light py-10">
-
-				<div class="row two-col-center">
-
-					<!-- title column -->
-					<div class="col-xl-6 col-lg-4">
-						<h5 class="mt-7 text-light"> 🏆 AWARDS & HONORS</h5>
-					</div>
-
-					<!-- content column -->
-					<div class="col-xl-6 col-lg-8">
-
-						<!-- experience item -->
-						<div class="row my-5" data-animation="fade-in-left 1s .9s">
-							<div class="col-md-3">
-								<div class="opacity-04">2025</div>
-							</div>
-							<div class="col">
-								<h5>Edward R. Murrow Award </h5>
-								<p>Gen Z in Myanmar - Digital Special Coverage - Multi-format UX strategy </p>
-							</div>
-						</div>
-
-						<!-- experience item -->
-						<div class="row my-5" data-animation="fade-in-left 1s .4s">
-							<div class="col-md-3">
-								<div class="opacity-04">2024</div>
-							</div>
-							<div class="col">
-								<h5>Edward R. Murrow Award </h5>
-								<p>Under the gun in Myanmar - Multimedia Feature on Myanmar - Led UX for interactive
-									multimedia feature</p>
-							</div>
-						</div>
-
-						<!-- experience item -->
-						<div class="row my-5" data-animation="fade-in-left 1s .7s">
-							<div class="col-md-3">
-								<div class="opacity-04">2018</div>
-							</div>
-							<div class="col">
-								<h5>Gracie Award</h5>
-								<p>Rohingya Crisis Multimedia Package - Online Feature </p>
-							</div>
-						</div>
-
-						<!-- experience item -->
-						<div class="row my-5" data-animation="fade-in-left 1s .7s">
-							<div class="col-md-3">
-								<div class="opacity-04">2010</div>
-							</div>
-							<div class="col">
-								<h5>Society of Environmental Journalists</h5>
-								<p> The Last Untamed River - Outstanding Reporting</p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- separator -->
-				<hr class="mb-9">
-
-				<div id="skills" class="row">
-
-					<!-- title column -->
-					<div class="col-xl-6 col-lg-4">
-						<h5 class="py-4">🧰 SKILLS & TOOLS</h5>
-					</div>
-
-					<!-- content column -->
-					<div class="col-xl-6 col-lg-8">
-
-						<!-- group -->
-						<div class="row">
-							<!-- group title -->
-							<div class="col-md-3 pt-4 mb-0">
-								<p class="opacity-07">Development</p>
-							</div>
-							<!-- skills list -->
-							<div class="col">
-								<div class="row">
-									<div class="col-4 py-4">HTML</div>
-									<div class="col-4 py-4">CSS</div>
-									<div class="col-4 py-4">Javascript</div>
-									<div class="col-4 py-4">ES6</div>
-									<div class="col-4 py-4">React</div>
-									<div class="col-4 py-4">Gsap</div>
-									<div class="col-4 py-4">SASS</div>
-									<div class="col-4 py-4">Three js</div>
-									<div class="col-4 py-4">Tailwind CSS</div>
-								</div>
-							</div>
-						</div>
-						<!-- /group -->
-
-						<hr>
-
-						<!-- group -->
-						<div class="row">
-							<!-- group title -->
-							<div class="col-md-3 pt-4 mb-0">
-								<p class="opacity-07">Design</p>
-							</div>
-							<!-- skills list -->
-							<div class="col">
-								<div class="row">
-									<div class="col-4 py-4">UI/UX</div>
-									<div class="col-4 py-4">Figma</div>
-									<div class="col-4 py-4">Adobe XD</div>
-									<div class="col-4 py-4">Photoshop</div>
-									<div class="col-4 py-4">Illustrator</div>
-									<div class="col-4 py-4">Adobe After Effects</div>
-								</div>
-							</div>
-						</div>
-						<!-- /group -->
-
-
-					</div>
-
-				</div>
-				<!-- Sticky Back to Top -->
-				<span class="back-to-top">
-					<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-				</span>
-
-				<hr style="height:3em;">
-
-			</div>
-		</section>
-		<!-- /Experience -->
-
-
-	</main>
-	<!-- /Main Content -->
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-
-			&nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-
-			&nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-		</div>
-
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="wordmark" href="index.html" aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a>
+                <a
+                    href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX <span aria-hidden="true">↗</span></a>
+                <a
+                    href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>                    
+                    <a
+                    href="#contact">Contact</a></nav>
+            <a class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">VISUAL COMMUNICATIONS · BRANDING · INFORMATION DESIGN</p>
+                    <h1>Design that makes <em>complex ideas clear.</em></h1>
+                    <p class="hero-lead">Award-winning Senior Graphic Designer with 18+ years of experience creating
+                        thoughtful brand systems, executive presentations, infographics, and digital campaigns for
+                        corporate and mission-driven organizations.</p>
+                    <div class="actions"><a class="button button-primary" href="#work">View Selected Work <span
+                                aria-hidden="true">↗</span></a><a class="button button-outline"
+                            href="mailto:minhhadc@gmail.com?subject=Resume%20request">Request Resume <span
+                                aria-hidden="true">↗</span></a></div>
+                </div>
+                <figure class="hero-portrait">
+                    <div class="portrait-frame"><img src="img/minhha-portrait.webp"
+                            alt="Minh-Ha Le holding an award at a professional recognition ceremony" width="800"
+                            height="800" fetchpriority="high"></div>
+                    <figcaption><span class="portrait-caption-rule" aria-hidden="true"></span><span>MINH-HA LE
+                            <small>DESIGNER · VISUAL STORYTELLER</small></span></figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="section work" id="work">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">PORTFOLIO / SELECTED WORK</p>
+                        <h2>Selected Work<span class="accent">.</span></h2>
+                    </div>
+                    <p>Explore ten case-study pages spanning brand identity, editorial graphics, presentations,
+                        information design, interactive storytelling, video, publications, and campaigns.</p>
+                </div>
+                <div class="project-grid">
+                    <a class="project" href="branding.html">
+                        <div class="project-art project-cover"><img src="img/thumb-branding.webp"
+                                alt="Portfolio artwork preview for Lionchase - Brand & Investor Communications"
+                                loading="lazy" width="1200" height="800"></div>
+                        <div class="project-meta"><span>01 / BRAND IDENTITY / EDITORIAL</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>Lionchase - Brand & Investor Communications</h3>
+                        <p>A cohesive visual identity and investor communications system.</p>
+                    </a>
+                    <a class="project" href="northstar.html">
+                        <div class="project-art project-cover"><img src="img/thumb-northstar-technologies.webp"
+                                alt="Portfolio artwork preview for Northstar - Integrated Brand Experience"
+                                loading="lazy" width="1200" height="800"></div>
+                        <div class="project-meta"><span>02 / SELF-INITIATED / BRAND SYSTEM</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>Northstar - Integrated Brand Experience</h3>
+                        <p>Conceptual brand identity, presentations, and employee communications.</p>
+                    </a>
+                    <a class="project" href="powerpoint.html">
+                        <div class="project-art project-cover"><img src="img/thumb-powerpoint.webp"
+                                alt="Portfolio artwork preview for Executive Presentations & Reports" loading="lazy"
+                                width="1200" height="800"></div>
+                        <div class="project-meta"><span>03 / PRESENTATION DESIGN</span><span aria-hidden="true">↗</span>
+                        </div>
+                        <h3>Executive Presentations & Reports</h3>
+                        <p>Strategic decks, reports, and executive visual storytelling.</p>
+                    </a>
+                    <a class="project" href="infographics.html">
+                        <div class="project-art project-cover"><img src="img/thumb-infographics.webp"
+                                alt="Portfolio artwork preview for Infographics & Information Design" loading="lazy"
+                                width="1200" height="800"></div>
+                        <div class="project-meta"><span>04 / DATA VISUALIZATION</span><span aria-hidden="true">↗</span>
+                        </div>
+                        <h3>Infographics & Information Design</h3>
+                        <p>Editorial infographics, isometric illustration, and clear explanations.</p>
+                    </a>
+                    <a class="project" href="interactive.html">
+                        <div class="project-art project-cover"><img src="img/thumb-interactive.webp"
+                                alt="Myanmar election interactive visualizations showing lower and upper house parliamentary seat charts"
+                                loading="lazy" width="1200" height="800"></div>
+                        <div class="project-meta"><span>05 / INTERACTIVE / MAPS & CHARTS</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>Interactive Data Storytelling</h3>
+                        <p>Interactive visualizations exploring Myanmar election data.</p>
+                    </a>
+                    <a class="project" href="video-animation.html">
+                        <div class="project-art project-cover"><img src="img/thumb-video-animation.webp"
+                                alt="Portfolio artwork preview for Video & Motion Storytelling" loading="lazy"
+                                width="1200" height="800"></div>
+                        <div class="project-meta"><span>06 / VIDEO / ANIMATION</span><span aria-hidden="true">↗</span>
+                        </div>
+                        <h3>Video & Motion Storytelling</h3>
+                        <p>Animated editorial graphics and a South China Sea explainer.</p>
+                    </a>
+                    <a class="project" href="ebooks.html">
+                        <div class="project-art project-cover"><img src="img/thumb-ebooks.webp"
+                                alt="Portfolio artwork preview for eBooks & Digital Publications" loading="lazy"
+                                width="1200" height="800"></div>
+                        <div class="project-meta"><span>07 / EDITORIAL / PUBLICATION DESIGN</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>eBooks & Digital Publications</h3>
+                        <p>Drawing Fire and Radio Free Asia digital publications.</p>
+                    </a>
+                    <a class="project" href="social-media.html">
+                        <div class="project-art project-cover"><img src="img/thumb-social-media.webp"
+                                alt="Portfolio artwork preview for Social Media & Campaign Design" loading="lazy"
+                                width="1200" height="800"></div>
+                        <div class="project-meta"><span>08 / CAMPAIGNS / CREATIVE EXPLORATIONS</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>Social Media & Campaign Design</h3>
+                        <p>Northstar campaign graphics and original creative concepts.</p>
+                    </a>
+                    <a class="project" href="graphics.html">
+                        <div class="project-art project-cover"><img
+                                src="https://minhhale.github.io/graphic-designer/img/chinese-spy.jpg"
+                                alt="Editorial composite for Radio Free Asia story about the Wang Shujun espionage case"
+                                loading="lazy" width="1000" height="572"></div>
+                        <div class="project-meta"><span>09 / EDITORIAL GRAPHICS / VISUAL STORYTELLING</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>Editorial Graphics &amp; Visual Storytelling</h3>
+                        <p>Original Radio Free Asia editorial composites exploring espionage, human rights, and
+                            international relations.</p>
+                    </a>
+                    <a class="project" href="logo.html">
+                        <div class="project-art project-cover"><img
+                                src="https://minhhale.github.io/graphic-designer/img/mekongindependent-logo-branding.png"
+                                alt="Mekong Independent logo and brand guidelines featuring a river-inspired blue identity"
+                                loading="lazy"></div>
+                        <div class="project-meta"><span>10 / LOGO DESIGN / BRAND IDENTITY</span><span
+                                aria-hidden="true">↗</span></div>
+                        <h3>Logo Design &amp; Brand Identity</h3>
+                        <p>Mekong Independent and Genn Cold logo concepts, identity systems, and brand guideline
+                            explorations.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="impact" aria-label="Experience and recognition">
+            <div class="container impact-grid">
+                <div><strong>18+</strong><span>Years of design experience</span></div>
+                <div><strong>2</strong><span>Edward R. Murrow Awards</span></div>
+                <div><strong>45%</strong><span>Engagement improvement on RFA modernization</span></div>
+                <div><strong>31%</strong><span>Newsletter engagement improvement at Lionchase</span></div>
+            </div>
+        </section>
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">EXPERTISE / CAPABILITIES</p>
+                        <h2>Design with purpose<span class="accent">.</span></h2>
+                    </div>
+                    <p>I connect visual storytelling with organizational goals, from initial concepts to accessible,
+                        brand-consistent delivery.</p>
+                </div>
+                <div class="capabilities">
+                    <div><span class="cap-number">01</span>
+                        <h3>Brand Identity & Campaigns</h3>
+                        <p>Visual systems, creative concepts, campaign assets, and brand consistency.</p>
+                    </div>
+                    <div><span class="cap-number">02</span>
+                        <h3>Infographics & Data Visualization</h3>
+                        <p>Technical illustrations, editorial graphics, maps, and visual explanations.</p>
+                    </div>
+                    <div><span class="cap-number">03</span>
+                        <h3>Presentations & Reports</h3>
+                        <p>Executive decks, publications, information hierarchy, and clear messaging.</p>
+                    </div>
+                    <div><span class="cap-number">04</span>
+                        <h3>Digital & Social Communications</h3>
+                        <p>Digital campaigns, email communications, and responsive content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="container contact-inner">
+                <div>
+                    <p class="eyebrow">LET'S CONNECT</p>
+                    <h2>Let's create something<br>impactful.</h2>
+                    <p>Available for senior graphic design and visual communications opportunities.</p>
+                </div><a class="button button-light" href="mailto:minhhadc@gmail.com?subject=Design%20opportunity">Get
+                    in Touch <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a
+                    href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development Portfolio ↗</a>     
+                    <a
+                    href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© <span id="year">2026</span> Minh-Ha Le</p>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
