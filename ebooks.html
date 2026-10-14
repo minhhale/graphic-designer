@@ -1,339 +1,455 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - Ebooks</title>
-<meta name="description" content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">         
+    <meta name="description"
+        content="Digital publication and eBook design portfolio by Minh-Ha Le, featuring Radio Free Asia's award-winning Drawing Fire: The Political Cartoons of Rebel Pepper.">
+    <title>eBooks &amp; Digital Publications | Minh-Ha Le</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .ebook-lead {
+            max-width: 790px
+        }
 
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
-	<!-- end: Facebook Open Graph -->
+        .ebook-cover-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px #102b4726
+        }
 
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/">
+        .ebook-library-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1000/650;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px
+        }
 
+        .ebook-feature {
+            display: grid;
+            grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+            gap: 36px;
+            align-items: stretch;
+            margin-top: 30px
+        }
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .ebook-cover {
+            min-height: 400px;
+            border-radius: 14px;
+            background: linear-gradient(155deg, #0c2a47 0%, #144e70 55%, #082238 100%);
+            padding: 44px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            box-shadow: 0 15px 35px #102b4726;
+            position: relative;
+            overflow: hidden
+        }
 
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
+        .ebook-cover:after {
+            content: '';
+            position: absolute;
+            width: 270px;
+            height: 270px;
+            border: 1px solid #ffffff33;
+            border-radius: 50%;
+            right: -105px;
+            bottom: -125px;
+            box-shadow: 0 0 0 40px #ffffff09, 0 0 0 80px #ffffff07
+        }
 
+        .ebook-cover .cover-kicker {
+            font-size: .75rem;
+            letter-spacing: .18em;
+            font-weight: 700;
+            color: #a9d3e8
+        }
 
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
+        .ebook-cover .cover-title {
+            font-size: clamp(2.7rem, 5vw, 5.5rem);
+            line-height: 1.02;
+            letter-spacing: -.05em;
+            font-weight: 800
+        }
 
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
+        .ebook-cover .cover-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            max-width: 300px;
+            color: #e4f2fb
+        }
 
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
+        .ebook-cover .cover-credit {
+            font-size: .75rem;
+            letter-spacing: .13em
+        }
 
-		@keyframes float {
+        .ebook-detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px
+        }
 
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
+        .ebook-detail p {
+            max-width: 690px
+        }
 
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
+        .ebook-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin: 8px 0
+        }
 
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
+        .ebook-meta span {
+            border: 1px solid #c9d8e4;
+            border-radius: 99px;
+            padding: 6px 12px;
+            font-size: .83rem;
+            color: #31536d
+        }
 
-		@keyframes pulse-glow {
+        .ebook-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 14px
+        }
 
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
+        .ebook-button {
+            display: inline-block;
+            background: #0d385b;
+            color: #fff !important;
+            padding: 13px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700
+        }
 
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
+        .ebook-button.secondary {
+            background: #e7f1f7;
+            color: #0d385b !important
+        }
 
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
+        .ebook-pdf {
+            width: 100%;
+            height: 620px;
+            border: 1px solid #d6e3eb;
+            border-radius: 12px;
+            background: #edf3f7
+        }
 
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
+        .ebook-caption {
+            color: #52697c;
+            font-size: .9rem;
+            margin-top: 12px
+        }
 
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
+        .ebook-steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 28px
+        }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
+        .ebook-step {
+            background: #fff;
+            border: 1px solid #dbe5ed;
+            border-radius: 12px;
+            padding: 25px
+        }
 
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
+        .ebook-step h3 {
+            margin: 10px 0
+        }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
+        .ebook-step p {
+            margin-bottom: 0
+        }
 
+        .ebook-award {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            background: #e8f3f9;
+            border-left: 4px solid #267ba7;
+            border-radius: 10px;
+            padding: 26px 30px;
+            margin-top: 30px
+        }
 
-		.btn-hover-effect {
-			display: inline-block;
-			padding: 12px 28px;
-			margin-bottom: 1em;
-			margin-right: 1em;
-			font-size: 16px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #100f0f;
-			background: linear-gradient(135deg, #f0d104, #cece04);
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
+        .ebook-award .medal {
+            font-size: 2.4rem
+        }
 
-		.btn-hover-effect a {
-			color: black;
-		}
+        .ebook-award p {
+            margin: 4px 0 0
+        }
 
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(233, 217, 4, 0.3);
-		}
+        .ebook-library {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 26px
+        }
 
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg,
-					transparent,
-					rgba(255, 255, 255, 0.2),
-					transparent);
-			transition: left 0.5s;
-		}
+        .ebook-library article {
+            border: 1px solid #dce5ed;
+            border-radius: 12px;
+            padding: 28px;
+            background: white
+        }
 
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-	</style>
+        .ebook-library h3 {
+            margin: 0 0 10px
+        }
 
+        .ebook-library a {
+            color: #16618a;
+            text-underline-offset: 3px
+        }
+
+        @media(max-width:800px) {
+            .ebook-feature {
+                grid-template-columns: 1fr
+            }
+
+            .ebook-cover-image {
+                min-height: 0
+            }
+
+            .ebook-steps {
+                grid-template-columns: 1fr
+            }
+
+            .ebook-pdf {
+                height: 490px
+            }
+        }
+
+        @media(max-width:600px) {
+            .ebook-library {
+                grid-template-columns: 1fr
+            }
+
+            .ebook-pdf {
+                height: 370px
+            }
+
+            .ebook-award {
+                align-items: flex-start
+            }
+
+            .ebook-cover {
+                padding: 30px
+            }
+        }
+    </style>
 </head>
 
-<body class="fixed-header fixed-footer">
-
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="https://minhhale.github.io/graphic-designer/" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>
-				<li><a href="index.html">Main page</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/">Digital Designer</a></li>
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-
-
-		<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-
-		<!-- About -->
-		<section class="about" data-background="#fbfcfd">
-			<div class="container">
-				<div class="col-xl-12">
-					<h3>Digital Books & Storytelling</h3>
-					<p>I design and produce <strong>Radio Free Asia’s eBooks</strong>, turning investigative reporting and cultural stories into engaging, easy-to-read digital publications. I love shaping <strong>clean typography, custom graphics, and responsive layouts</strong> that bring important stories to life and make them easy for anyone to access. My projects include Drawing Fire, an <strong>SDX Award winner</strong>, available as <strong>PDF, ePub, and interactive downloads</strong> on iTunes and Google Play.</p>
-				</div>
-			</div>
-		</section>
-		<!-- Impact -->
-		<section class="bg-lines">
-			<div class="container py-6">
-
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 1em;">
-					<a href="https://rfa-english.s3.amazonaws.com/ebooks/RebelPepper.pdf" target="_blank"><img src="img/drawingFire-ebook.jpg" alt="drawingFire-ebook" width="100%"></a>
-					<hr style="height: 1em;">
-					<h4>Drawing Fire: The Political Cartoons of Rebel Pepper eBook</h4>
-
-					<h5>Project Overview</h5>
-					<p>This <a href="https://rfa-english.s3.amazonaws.com/ebooks/RebelPepper.pdf" target="_blank">award-winning eBook</a> showcases the daring political cartoons of Rebel Pepper, a Chinese dissident artist known for sharp commentary on censorship, authoritarianism, and global politics. Published by Radio Free Asia, the project aimed to preserve and share Rebel Pepper’s body of work in a format that is both visually striking and easy to navigate. The eBook went on to win an <a href="https://www.rfa.org/english/about/releases/rebel-pepper-04252018063549.html" target="_blank">SDX Award for Excellence in Journalism</a>, recognizing its creative storytelling and impact.</p>
-
-					<h5>Design Goals</h5>
-
-					<ul>
-						<li><strong>• Visual Storytelling:</strong> Present hundreds of cartoons in a way that honors their artistry and political weight.</li>	
-						<li><strong>• User-Friendly Reading:</strong> Deliver a seamless digital reading experience across desktop and mobile.</li>
-						<li><strong>• Brand Alignment:</strong> Reflect RFA’s commitment to press freedom and creative expression.</li>
-					</ul>
-
-					<h5>Process & Tools</h5>
-					<p>I designed the eBook layout using InDesign and coordinated with editors and Rebel Pepper to organize the cartoons by theme and chronology. I applied a restrained color palette—anchored in Rebel Pepper’s signature blues—to create a gallery-like feel, while using bold typography and high-resolution images to preserve each cartoon’s detail. Interactive PDF features and optimized file sizes ensured smooth downloads and sharing across global audiences.</p>
-
-					<h5>Outcome</h5>
-					<p>The final eBook not only preserved Rebel Pepper’s work but also elevated it, earning the SDX Award for its innovative fusion of art and journalism. Readers can explore the cartoons as both political critique and cultural record, amplifying awareness of press freedom and resistance to censorship.</p>
-				</div>
-
-				<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 1em">
-					<a href="https://www.rfa.org/english/bookshelf/" target="_blank"><img src="img/ebook-rfa.jpg" alt="ebook-rfa" width="100%"></a>
-					<hr style="height: 1em">
-
-					<h4>RFA eBooks</h4>
-					<p>I design and produce Radio Free Asia’s <a href="https://www.rfa.org/english/bookshelf/" target="_blank">eBooks</a> with my colleague, transforming investigative reporting and cultural stories into visually engaging, easy-to-read digital publications. Each title blends clear typography, custom graphics, and responsive layouts to showcase RFA’s award-winning journalism most notably Drawing Fire: The Political Cartoons of Rebel Pepper, which earned an SDX Award for Excellence in Journalism. Available as PDF, ePub, and interactive downloads on iTunes and Google Play, these eBooks bring powerful stories from workers’ rights to environmental crises to readers around the world.</p>
-
-				</div>
-
-			</div>
-		</section>
-		<!-- Impact -->
-
-
-		<!-- Project Navigation -->
-		<!-- <div class="project-nav">
-			<div class="col-5">
-				<a href="newsletters.html">
-					<small>Prev:</small>
-					<h6>Newsletters Project</h6>
-				</a>
-			</div>
-			<div class="col-2 all-projects">
-			<a href="index.html" title="All Projects">
-					<i class="fa fa-home"></i>          
-					<h6>Home</h6>
-			</a>
-			</div>
-			<div class="col-5">
-				<a href="graphics.html">
-					<small>Next:</small>
-					<h6>Graphics Project</h6>
-				</a>
-			</div>
-		</div> -->
-		<!-- /Project Navigation -->
-
-		<!-- Sticky Back to Top -->
-		<span class="back-to-top justify-content-center text-center	">
-			<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-		</span>
-
-
-	</main>
-	<!-- /Main Content -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-
-			&nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-			
-			&nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-
-
-		</div>
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+<body><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner"><a class="wordmark" href="index.html"
+                aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a>
+                <a
+                    href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX ↗</a>
+                <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development ↗</a>
+                <a href="index.html#contact">Contact</a></nav><a
+                class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk ↗</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="case-hero">
+            <div class="container">
+                <p class="eyebrow">SELECTED WORK / EDITORIAL DESIGN &amp; DIGITAL PUBLISHING</p>
+                <h1>eBooks &amp; Digital Storytelling<span class="accent">.</span></h1>
+                <p class="hero-lead">Turning journalism, illustration, and complex narratives into thoughtfully designed
+                    digital publications.</p>
+                <div class="case-tags"><span>Editorial Design</span><span>Digital Publishing</span><span>Adobe
+                        InDesign</span><span>Visual Storytelling</span><span>PDF &amp; ePub</span></div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <div class="case-intro">
+                    <div>
+                        <p class="eyebrow">01 / PROJECT OVERVIEW</p>
+                        <h2>Stories made to be explored.</h2>
+                        <p>I designed and produced digital books at Radio Free Asia, combining editorial typography,
+                            illustration, and organized page layouts to help audiences engage with reporting and
+                            cultural stories. This work includes <em>Drawing Fire</em>, a collection of political
+                            cartoons by Rebel Pepper, and other RFA digital publications created in collaboration with
+                            editorial colleagues.</p>
+                    </div>
+                    <div class="case-facts">
+                        <div><span>DISCIPLINE</span><strong>Editorial &amp; publication design</strong></div>
+                        <div><span>ORGANIZATION</span><strong>Radio Free Asia</strong></div>
+                        <div><span>FORMATS</span><strong>PDF · ePub · Digital eBooks</strong></div>
+                        <div><span>TOOLS</span><strong>Adobe InDesign · Acrobat · Photoshop</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">02 / FEATURED PUBLICATION</p>
+                <h2>Drawing Fire - The Political Cartoons of Rebel Pepper.</h2>
+                <p class="ebook-lead">An award-winning collection of political satire that brings together Rebel
+                    Pepper's commentary on censorship, human rights, and politics across Asia.</p>
+                <div class="ebook-feature"><img class="ebook-cover-image" src="img/drawingFire-ebook.jpg"
+                        alt="Original cover artwork for Drawing Fire: The Political Cartoons of Rebel Pepper, Radio Free Asia"
+                        width="1200" height="960" loading="lazy">
+                    <div class="ebook-detail">
+                        <p class="eyebrow">EDITORIAL DESIGN / PUBLICATION PRODUCTION</p>
+                        <h3>A gallery-like reading experience for powerful visual commentary.</h3>
+                        <p>The book brings together 50 political cartoons by Wang Liming, known as Rebel Pepper. The
+                            design challenge was to give the illustrations space to speak while maintaining a readable,
+                            coherent structure across the collection.</p>
+                        <p>I developed the publication layout in Adobe InDesign, organizing the content with editors and
+                            the artist, and balancing typography, image quality, and file size for digital distribution.
+                        </p>
+                        <div class="ebook-meta"><span>50 cartoons</span><span>58-page PDF</span><span>2018 SDX
+                                Award</span></div>
+                        <div class="ebook-buttons"><a class="ebook-button"
+                                href="https://rfa-english.s3.amazonaws.com/ebooks/RebelPepper.pdf" target="_blank"
+                                rel="noopener noreferrer">Read the eBook ↗</a><a class="ebook-button secondary"
+                                href="https://www.rfa.org/english/about/releases/rebel-pepper-04252018063549.html"
+                                target="_blank" rel="noopener noreferrer">Award announcement ↗</a></div>
+                    </div>
+                </div>
+                <div class="ebook-award"><span class="medal" aria-hidden="true">✦</span>
+                    <div><strong>2018 Sigma Delta Chi Award for Excellence in Journalism</strong>
+                        <p>Radio Free Asia's <em>Drawing Fire</em> won in the e-book category, recognizing the
+                            publication's editorial work and presentation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">03 / INSIDE THE BOOK</p>
+                <h2>Let the artwork lead.</h2>
+                <p class="ebook-lead">Explore the actual published PDF below. The viewer displays the original
+                    publication, not a recreation of its pages.</p>
+                <div style="margin-top:26px"><iframe class="ebook-pdf" title="Drawing Fire published eBook PDF preview"
+                        loading="lazy" src="https://rfa-english.s3.amazonaws.com/ebooks/RebelPepper.pdf#view=FitH"
+                        referrerpolicy="no-referrer"></iframe>
+                    <p class="ebook-caption">If the PDF does not display in your browser, <a
+                            href="https://rfa-english.s3.amazonaws.com/ebooks/RebelPepper.pdf" target="_blank"
+                            rel="noopener noreferrer">open the complete eBook in a new tab ↗</a>.</p>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">04 / DESIGN APPROACH</p>
+                <h2>Clarity, rhythm, and respect for the story.</h2>
+                <div class="ebook-steps">
+                    <article class="ebook-step">
+                        <p class="eyebrow">01 / STRUCTURE</p>
+                        <h3>Editorial hierarchy</h3>
+                        <p>Organized the cartoons and supporting text into a navigable reading sequence, with consistent
+                            headings and pacing.</p>
+                    </article>
+                    <article class="ebook-step">
+                        <p class="eyebrow">02 / VISUAL LANGUAGE</p>
+                        <h3>Artwork-first layouts</h3>
+                        <p>Used restrained color and purposeful white space to keep the focus on the illustrations and
+                            their editorial context.</p>
+                    </article>
+                    <article class="ebook-step">
+                        <p class="eyebrow">03 / DELIVERY</p>
+                        <h3>Digital-ready production</h3>
+                        <p>Prepared high-quality imagery and optimized publication files for accessible sharing and
+                            reading across devices.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">05 / ADDITIONAL PUBLICATIONS</p>
+                <h2>RFA eBooks - a broader publishing program.</h2>
+                <p class="ebook-lead">Beyond <em>Drawing Fire</em>, I collaborated with colleagues on Radio Free Asia
+                    eBooks covering investigative reporting, cultural issues, and stories from across the region.</p>
+                <div class="ebook-library">
+                    <article><img class="ebook-library-image" src="img/ebook-rfa.jpg"
+                            alt="Collage of Radio Free Asia eBook covers" width="1000" height="650" loading="lazy">
+                        <p class="eyebrow">PUBLICATION COLLECTION</p>
+                        <h3>RFA Digital Bookshelf</h3>
+                        <p>Explore the publisher's collection of digital books and long-form editorial projects.</p><a
+                            href="https://www.rfa.org/english/bookshelf/" target="_blank"
+                            rel="noopener noreferrer">Explore RFA eBooks ↗</a>
+                    </article>
+                    <article>
+                        <p class="eyebrow">PUBLISHED FEATURE</p>
+                        <h3>Drawing Fire - award coverage</h3>
+                        <p>Read RFA's announcement recognizing the Rebel Pepper eBook in the international journalism
+                            awards.</p><a
+                            href="https://www.rfa.org/english/about/releases/rebel-pepper-04252018063549.html"
+                            target="_blank" rel="noopener noreferrer">Read the announcement ↗</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">06 / OUTCOME</p>
+                <h2>Publication design that supports journalism.</h2>
+                <p class="ebook-lead">These projects demonstrate how editorial design can turn a diverse body of
+                    reporting and visual material into a coherent digital reading experience. <em>Drawing Fire</em> was
+                    recognized with a Sigma Delta Chi Award, reflecting the strength of the publication as a
+                    collaborative journalism project.</p>
+                <div class="case-actions"><a href="https://rfa-english.s3.amazonaws.com/ebooks/RebelPepper.pdf"
+                        target="_blank" rel="noopener noreferrer">View Drawing Fire ↗</a><a
+                        href="https://www.rfa.org/english/bookshelf/" target="_blank" rel="noopener noreferrer">Browse
+                        RFA eBooks ↗</a></div>
+            </div>
+        </section>
+        <section class="case-next">
+            <div class="container">
+                <p class="eyebrow">EXPLORE MORE</p>
+                <h2>More selected work</h2>
+                <p><a href="video-animation.html">Video &amp; Motion ↗</a> &nbsp; · &nbsp; <a
+                        href="infographics.html">Infographics ↗</a> &nbsp; · &nbsp; <a href="powerpoint.html">Executive
+                        Presentations ↗</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank" rel="noopener noreferrer">Web Development ↗</a>
+                    <a href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© 2026 Minh-Ha Le</p>
+        </div>
+    </footer>
 </body>
 
 </html>
