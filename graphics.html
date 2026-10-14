@@ -1,454 +1,382 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - Graphics</title>
-<meta name="description" content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/graphic.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">            
+    <meta name="description"
+        content="Editorial graphics and visual storytelling by Minh-Ha Le, Senior Graphic Designer.">
+    <title>Editorial Graphics | Minh-Ha Le</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .motion-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0b2035;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(9, 33, 57, .12)
+        }
 
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/graphic.png">
-	<!-- end: Facebook Open Graph -->
+        .motion-frame video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain
+        }
 
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/graphic-designer/img/graphic.png">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/">
+        .motion-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block
+        }
 
+        .motion-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 30px
+        }
 
+        .motion-item {
+            margin: 0;
+            min-width: 0
+        }
 
+        .motion-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #eef3f7;
+            border: 1px solid #dce5ed
+        }
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .motion-item figcaption {
+            font-size: .9rem;
+            color: #51667a;
+            line-height: 1.6;
+            margin-top: 12px
+        }
 
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
+        .motion-item h3 {
+            margin: 0 0 8px;
+            color: #102b47
+        }
 
+        .motion-intro {
+            max-width: 780px
+        }
 
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
+        .motion-link {
+            color: #27678f;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
 
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
+        .motion-feature {
+            margin-top: 30px
+        }
 
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
+        .motion-note {
+            color: #52697c;
+            font-size: .9rem;
+            line-height: 1.7;
+            margin-top: 16px
+        }
 
-		@keyframes float {
+        @media(max-width:900px) {
+            .motion-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
 
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
+        @media(max-width:600px) {
+            .motion-gallery {
+                grid-template-columns: 1fr
+            }
+        }
 
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
+        .graphics-feature {
+            margin: 28px 0 0
+        }
 
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
+        .graphics-feature img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #dce5ed;
+            background: #f5f7fa
+        }
 
-		@keyframes pulse-glow {
+        .graphics-caption {
+            margin: 12px 0 0;
+            color: #52697c;
+            font-size: .92rem;
+            line-height: 1.65
+        }
 
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
+        .graphics-intro {
+            max-width: 800px
+        }
 
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
+        .graphics-duo {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 28px
+        }
 
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
+        .graphics-duo figure {
+            margin: 0;
+            min-width: 0
+        }
 
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
+        .graphics-duo img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/10;
+            object-fit: contain;
+            background: #f4f7f9;
+            border: 1px solid #dce5ed;
+            border-radius: 12px;
+            display: block
+        }
 
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
+        .graphics-duo figcaption {
+            font-size: .92rem;
+            line-height: 1.6;
+            color: #52697c;
+            margin-top: 12px
+        }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
+        .graphics-feature--contained img {
+            max-height: 640px;
+            object-fit: contain;
+            background: #f4f7f9
+        }
 
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
+        .graphics-source {
+            font-size: .88rem;
+            color: #51667a;
+            margin-top: 15px
+        }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
+        .graphics-source a {
+            color: #27678f;
+            text-underline-offset: 3px
+        }
 
-
-		.btn-hover-effect {
-			display: inline-block;
-			padding: 12px 28px;
-			margin-bottom: 1em;
-			margin-right: 1em;
-			font-size: 16px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #100f0f;
-			background: linear-gradient(135deg, #f0d104, #cece04);
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.btn-hover-effect a {
-			color: black;
-		}
-
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(233, 217, 4, 0.3);
-		}
-
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg,
-					transparent,
-					rgba(255, 255, 255, 0.2),
-					transparent);
-			transition: left 0.5s;
-		}
-
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-	</style>
-
+        @media(max-width:680px) {
+            .graphics-duo {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
 </head>
 
-<body class="fixed-header fixed-footer">
-
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="https://minhhale.github.io/graphic-designer/" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>
-				<li><a href="index.html">Main page</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/">Digital Designer</a></li>
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-
-
-		<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-
-		<!-- About -->
-		<section class="about" data-background="#fbfcfd">
-			<div class="container">
-				<div class="col-xl-12">
-					<h3>Graphics - Turning Data Into Compelling Visuals</h3>
-					<p>I create graphics that make complex stories easy to see and understand. Using tools like Adobe
-						Creative Suite, Canva and Figma, I translate research, data, and reporting into clear layouts,
-						thoughtful typography, and engaging visuals that guide audiences through challenging topics with
-						clarity and impact.</p>
-				</div>
-			</div>
-		</section>
-		<!-- /About -->
-
-		<!-- Portfolio Section -->
-		<section class="bg-lines py-6">
-			<div class="container p-0">
-					
-					<!-- Portfolio -->
-					<div class="grid lightbox photo-gallery" 
-					 	 data-gutter="5" 
-					     data-columns="3" 
-					     data-thumbnails="true" 
-					     data-thumbnails-pinned="true">
-
-						<a class="grid-item wide lightbox-link"
-						   href="img/lionchase-irl.jpg" 
-						   title="A sleek, modern corporate hero image for a financial newsletter titled “Lionchase IR Insights”. Depict an abstract golden lion silhouette emerging from layered gradients of deep navy blue and gold light. Subtle digital patterns and light flares add a sense of technology and sophistication, while the overall composition conveys strength, trust, and forward-thinking innovation." 
-						   data-background="img/lionchase-irl.jpg"
-						   data-thumbnail="img/lionchase-irl.jpg"></a>
-
-						<a class="grid-item tall lightbox-link"
-						   href="img/portfolio-pulse.jpg" 
-						   title="A futuristic business-tech hero image illustrating a global partnership between a healthtech AI company and a major electronics firm. Feature glowing connected dots forming a lung shape within a digital globe, with faint circuit patterns and data streams in the background. Use cool blue and green tones with neon accents to convey innovation, connectivity, and cutting-edge technology in healthcare." 
-						   data-background="img/portfolio-pulse.jpg"
-						   data-thumbnail="img/portfolio-pulse.jpg"></a>
-						
-						<a class="grid-item wide lightbox-link"
-						   href="img/healthmetryx-samsung.jpg" 
-						   title="3D-rendered concept of a glowing digital lung composed of interconnected gold and blue data nodes, surrounded by swirling AI circuitry and biometric waves. A subtle Samsung Galaxy Watch and data cloud appear in the background, symbolizing the integration of healthtech AI with wearable technology for advanced respiratory monitoring." 
-						   data-background="img/healthmetryx-samsung.jpg"
-						   data-thumbnail="img/healthmetryx-samsung.jpg"></a>
-						
-						<a class="grid-item lightbox-link"
-						   href="img/leadership.jpg" 
-						   title="Elegant digital illustration showing a confident entrepreneur overlooking a city skyline at sunrise, symbolic bridge connecting two buildings labeled “Today” and “Future,” representing business succession and wealth management, warm gold and blue tones conveying optimism and growth." 
-						   data-background="img/leadership.jpg"
-						   data-thumbnail="img/leadership.jpg"></a>
-
-						<a class="grid-item lightbox-link"
-						   href="img/market.jpg" 
-						   title="Modern flat vector illustration of a business owner handing over a golden key or document to a successor in a stylized office setting, abstract charts and upward arrows in the background, blue and gold palette, clean lines and geometric shapes conveying growth and transition." 
-						   data-background="img/market.jpg"
-						   data-thumbnail="img/market.jpg"></a>
-
-						<a class="grid-item lightbox-link"
-						   href="img/rating-research.jpg" 
-						   title="Modern flat vector illustration of a business owner handing over a golden key or document to a successor in a stylized office setting, abstract charts and upward arrows in the background, blue and gold palette, clean lines and geometric shapes conveying growth and transition." 
-						   data-background="img/rating-research.jpg"
-						   data-thumbnail="img/rating-research.jpg"></a>
-
-					</div>
-					<!-- /Portfolio -->
-
-			</div>
-		</section>
-		<!-- /Portfolio Section -->
-
-
-		<!-- Impact -->
-		<section class="bg-lines">
-			<div class="container py-6">
-
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 1em;">
-					<img src="img/chinese-spy.jpg" alt="chinese-spy" width="100%">
-					<hr style="height: 1em;">
-					<h4>Visualizing the Wang Shujun Espionage Case</h4>
-					<h5>Project Overview:</h5>
-					<p>This graphic tells the story of Wang Shujun, a Chinese spy who infiltrated foreign networks. It
-						condenses complex geopolitical details into a single, striking image that conveys both the human
-						element and the national context.</p>
-
-					<h5>Design Goals:</h5>
-					<ul>
-						<li>• Center Wang Shujun while framing the espionage narrative.</li>
-						<li>• Subtly include the Chinese flag to signal national ties.</li>
-						<li>• Keep the layout clear to guide the viewer’s eye.</li>
-					</ul>
-
-					<h5>Process:</h5>
-					<ul>
-						<li><strong>• Image Selection & Composition:</strong> Selected a photo of Wang on a bench to
-							humanize him and contrast with political symbolism.</li>
-						<li><strong>• Background Integration:</strong> Added a textured Chinese flag for instant context
-							without overpowering the subject.</li>
-						<li><strong>• Visual Emphasis:</strong> Left the bench, cane, and space untouched to keep
-							attention on Wang.</li>
-						<li><strong>• Color & Texture:</strong> Used red tones and star motifs to hint at espionage and
-							national identity.</li>
-					</ul>
-
-					<h5>Outcome:</h5>
-					<p>The final design balances human storytelling with geopolitical tension, making it suitable for
-						news, digital reporting, and analytical briefs.</p>
-					<p>This graphic demonstrates how thoughtful design can distill complex stories into compelling
-						visuals that inform and engage audiences.</p>
-				</div>
-
-				<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 1em">
-					<img src="img/uyghur-china.jpg" alt="uyghur-china" width="100%">
-					<hr style="height: 1em">
-
-					<h4>Uyghur Journalists’ Families Detained in China</h4>
-					<h5>Project Overview:</h5>
-					<p>This graphic highlights the human cost of China’s campaign of repression in Xinjiang by focusing
-						on the families of Radio Free Asia (RFA) Uyghur journalists. RFA reporters who cover human
-						rights abuses in the region have faced intense retaliation from Chinese authorities often
-						through the targeting of their relatives who remain inside China.</p>
-
-					<p>The collage depicts dozens of detained or disappeared family members, each representing a
-						personal connection to journalists now working in exile. Their only “crime” is being related to
-						people who report on mass detentions, religious persecution, and cultural erasure. By assembling
-						their portraits inside the outline of Xinjiang and layering them over a dark, wall-like texture,
-						the graphic symbolizes both the region’s isolation and the invisible prison walls separating
-						families.</p>
-
-					<p>This case underscores how the Chinese government uses collective punishment to silence overseas
-						reporting. It also illustrates the emotional toll on journalists who continue to inform the
-						world despite threats to their loved ones.</p>
-
-
-				</div>
-				<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 1em;">
-					<img src="img/cambodia-china-bowtie.png" alt="cambodia-china-bowtie" width="100%">
-					<hr style="height: 1em;">
-					<img src="img/cambodia-us-flag-big.jpg" alt="cambodia-us-flag-big" width="100%">
-					<hr style="height: 1em;">
-					<h4>China–Cambodia Relations Series</h4>
-					<p>As part of RFA’s coverage of China–Cambodia relations, I developed a set of graphics that
-						visually represented the growing ties between the two countries. My design challenge was to
-						create strong, symbolic visuals that could communicate complex political and economic
-						relationships at a glance.</p>
-					<p> Using national flags as the foundation, I explored different metaphors, such as a bowtie symbolizing partnership and blended flags suggesting unity to highlight Cambodia’s increasing
-						alignment with China. These graphics were designed to be bold, accessible, and instantly
-						recognizable across digital platforms.</p>
-					<p>The series effectively conveyed the nuances of Cambodia’s geopolitical position, making it easier
-						for audiences to understand the implications of its close ties with China.</p>
-				</div>
-
-
-			</div>
-		</section>
-		<!-- Impact -->
-		
-		<!-- Project Navigation -->
-		<!-- <div class="project-nav">
-			<div class="col-5">
-				<a href="ebooks.html">
-					<small>Prev:</small>
-					<h6>Ebooks Project</h6>
-				</a>
-			</div>
-			<div class="col-2 all-projects">
-			<a href="index.html" title="All Projects">
-					<i class="fa fa-home"></i>          
-					<h6>Home</h6>
-			</a>
-			</div>
-			<div class="col-5">
-				<a href="infographics.html">
-					<small>Next:</small>
-					<h6>Infographics Project</h6>
-				</a>
-			</div>
-		</div> -->
-		<!-- /Project Navigation -->
-
-		<!-- Sticky Back to Top -->
-		<span class="back-to-top">
-			<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-		</span>
-
-
-		<!-- Sticky Back to Top -->
-
-	</main>
-	<!-- /Main Content -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-		<!-- Social/Contact Links -->
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-
-			&nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-
-			&nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-		</div>
-		<!-- /Social/Contact Links -->
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+<body><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner"><a class="wordmark" href="index.html"
+                aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a
+                    href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development ↗</a>
+                    <a href="index.html#contact">Contact</a></nav><a
+                class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk ↗</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="case-hero">
+            <div class="container">
+                <p class="eyebrow">SELECTED WORK / EDITORIAL GRAPHICS</p>
+                <h1>Graphics &amp; Editorial Storytelling<span class="accent">.</span></h1>
+                <p class="hero-lead">Turning complex global stories into clear, compelling visuals through thoughtful
+                    composition, symbolism, and information design.</p>
+                <div class="case-tags"><span>Editorial Graphics</span><span>Photo Compositing</span><span>Visual
+                        Storytelling</span><span>Adobe Photoshop</span><span>Radio Free Asia</span></div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <div class="case-intro">
+                    <div>
+                        <p class="eyebrow">01 / PROJECT OVERVIEW</p>
+                        <h2>Make the story visible.</h2>
+                        <p>These editorial graphics were created to communicate complex political and human-rights
+                            stories at a glance. Combining photographic imagery, cultural symbols, and carefully
+                            controlled composition, each piece establishes context while keeping the central story
+                            clear.</p>
+                    </div>
+                    <div class="case-facts">
+                        <div><span>CLIENT / ORGANIZATION</span><strong>Radio Free Asia</strong></div>
+                        <div><span>DISCIPLINE</span><strong>Editorial graphics &amp; visual storytelling</strong></div>
+                        <div><span>FORMATS</span><strong>Digital news graphics · Image composites</strong></div>
+                        <div><span>TOOLS</span><strong>Adobe Creative Cloud</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">02 / FEATURED EDITORIAL GRAPHIC</p>
+                <h2>Visualizing the Wang Shujun espionage case.</h2>
+                <p class="graphics-intro">A composite portrait that brings together the subject of the story and
+                    recognizable Chinese national imagery. The visual approach balances human detail with the
+                    geopolitical context of the reporting.</p>
+                <figure class="graphics-feature"><img
+                        src="https://minhhale.github.io/graphic-designer/img/chinese-spy.jpg"
+                        alt="Editorial composite of Wang Shujun seated on a park bench, overlaid with Chinese flag elements"
+                        loading="lazy" width="1000" height="572">
+                    <figcaption class="graphics-caption">Radio Free Asia editorial graphic · Portrait composition and
+                        symbolic background treatment.</figcaption>
+                </figure>
+                <div class="case-grid" style="margin-top:32px">
+                    <article class="case-card"><span class="eyebrow">01 / CHALLENGE</span>
+                        <h3>Give context quickly</h3>
+                        <p>Introduce a complex espionage story in a single, recognizable visual.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">02 / APPROACH</span>
+                        <h3>Use layered symbolism</h3>
+                        <p>Integrate flag colors and star motifs without obscuring the subject, bench, or cane.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">03 / RESULT</span>
+                        <h3>Keep the focus human</h3>
+                        <p>Maintain an editorial composition that supports the accompanying reporting.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">03 / HUMAN-RIGHTS STORYTELLING</p>
+                <h2>Uyghur journalists’ families detained in China.</h2>
+                <p class="graphics-intro">A photo collage highlighting relatives of Radio Free Asia Uyghur journalists
+                    who were detained or disappeared in China. Individual portraits form the outline of Xinjiang, while
+                    a dark, wall-like texture reinforces the story of separation and repression.</p>
+                <figure class="graphics-feature"><img
+                        src="https://minhhale.github.io/graphic-designer/img/uyghur-china.jpg"
+                        alt="Photo collage of relatives of Uyghur journalists arranged inside a map-shaped silhouette over a dark brick wall"
+                        loading="lazy" width="1000" height="563">
+                    <figcaption class="graphics-caption">Radio Free Asia editorial graphic · Documentary portrait
+                        collage and geographic symbolism.</figcaption>
+                </figure>
+                <p class="graphics-source">Design focus: Human-centered storytelling, photo montage, geographic context,
+                    and sensitive editorial presentation.</p>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">04 / GEOPOLITICAL GRAPHICS SERIES</p>
+                <h2>China–Cambodia relations.</h2>
+                <p class="graphics-intro">A pair of graphics exploring the political and economic relationship between
+                    China and Cambodia. National flags become the visual foundation, while a bowtie and blended-flag
+                    treatment offer two distinct ways to communicate the story.</p>
+                <div class="graphics-duo">
+                    <figure><img src="https://minhhale.github.io/graphic-designer/img/cambodia-china-bowtie.png"
+                            alt="Bowtie illustration combining Cambodia's flag on the left and China's flag on the right"
+                            loading="lazy" width="936" height="520">
+                        <figcaption><strong>01 / Partnership metaphor.</strong> A bowtie constructed from the two
+                            national flags.</figcaption>
+                    </figure>
+                    <figure><img src="https://minhhale.github.io/graphic-designer/img/cambodia-us-flag-big.jpg"
+                            alt="Editorial illustration blending the flags of Cambodia and China" loading="lazy"
+                            width="936" height="520">
+                        <figcaption><strong>02 / Blended national imagery.</strong> A flag-based composition emphasizing
+                            the relationship between the countries.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">05 / CREATIVE APPROACH</p>
+                <h2>Clarity through composition.</h2>
+                <div class="case-grid">
+                    <article class="case-card"><span class="eyebrow">01 / RESEARCH</span>
+                        <h3>Understand the context</h3>
+                        <p>Identify the people, places, and political relationships that matter to the story.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">02 / CONCEPT</span>
+                        <h3>Find the visual metaphor</h3>
+                        <p>Use familiar symbols and photography to express the central editorial idea.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">03 / DESIGN</span>
+                        <h3>Establish visual hierarchy</h3>
+                        <p>Balance imagery, contrast, texture, and negative space to guide attention.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">06 / PROCESS &amp; TOOLS</p>
+                <h2>From reporting to a finished graphic.</h2>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <h3>Editorial brief</h3>
+                        <p>Review the story, determine the intended message, and select the most appropriate visual
+                            direction.</p>
+                    </article>
+                    <article class="case-card">
+                        <h3>Image development</h3>
+                        <p>Combine photography, flag imagery, shapes, and textures in a unified composition.</p>
+                    </article>
+                    <article class="case-card">
+                        <h3>Digital production</h3>
+                        <p>Refine contrast, alignment, and legibility for web-based editorial publication.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">07 / OUTCOME</p>
+                <h2>Editorial visuals that explain and engage.</h2>
+                <p class="graphics-intro">Together, these projects demonstrate an approach to editorial graphic design
+                    that translates difficult subjects into visually accessible stories, while preserving the human
+                    context behind the reporting.</p>
+                <div class="case-actions"><a class="btn btn-primary" href="index.html#work">Explore More Work ↗</a><a
+                        class="btn btn-secondary" href="mailto:minhhadc@gmail.com">Discuss a Project ↗</a></div>
+            </div>
+        </section>
+        <section class="case-next">
+            <div class="container">
+                <p class="eyebrow">EXPLORE MORE</p>
+                <h2>More selected work</h2>
+                <p><a href="infographics.html">Infographics ↗</a> &nbsp; · &nbsp; <a href="interactive.html">Interactive
+                        Data Visualizations ↗</a> &nbsp; · &nbsp; <a href="video-animation.html">Video &amp; Motion
+                        ↗</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank" rel="noopener noreferrer">Web Development ↗</a>
+                    <a href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© 2026 Minh-Ha Le</p>
+        </div>
+    </footer>
 </body>
 
 </html>
