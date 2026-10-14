@@ -1,485 +1,474 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - Infographic</title>
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">            
+    <meta name="description"
+        content="Infographics, data visualization, isometric illustration and editorial information design by Minh-Ha Le.">
+    <title>Infographics & Information Design | Minh-Ha Le</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .info-feature {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+            gap: 34px;
+            align-items: center;
+            margin-top: 30px
+        }
 
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
-	<!-- end: Facebook Open Graph -->
+        .info-feature.reverse {
+            grid-template-columns: minmax(280px, .8fr) minmax(0, 1.2fr)
+        }
 
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/">
+        .info-feature figure {
+            margin: 0
+        }
 
+        .info-feature img,
+        .info-gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #dce5ed;
+            background: #fff
+        }
 
+        .info-feature img {
+            max-height: 740px
+        }
 
+        .info-copy h3 {
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin: 8px 0 13px
+        }
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .info-copy p {
+            font-size: .95rem
+        }
 
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
+        .info-kicker {
+            font-size: .75rem !important;
+            font-weight: 750;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--blue) !important
+        }
 
+        .info-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 26px
+        }
 
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
+        .info-gallery figure {
+            margin: 0
+        }
 
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
+        .info-gallery img {
+            max-height: 700px
+        }
 
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
+        .info-gallery figcaption,
+        .info-feature figcaption {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #53677b;
+            margin-top: 10px
+        }
 
-		@keyframes float {
+        .info-panel {
+            padding: 18px;
+            background: #edf3f7;
+            border-radius: 12px
+        }
 
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
+        .info-panel a {
+            display: block
+        }
 
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
+        .info-note {
+            font-size: .82rem !important;
+            color: #66788b !important
+        }
 
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
+        .info-view {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: .83rem;
+            font-weight: 700;
+            color: #16648e;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
 
-		@keyframes pulse-glow {
+        .info-nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 24px
+        }
 
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
+        .info-nav a {
+            padding: 9px 14px;
+            border: 1px solid #cbd9e5;
+            border-radius: 30px;
+            background: #fff;
+            color: #234968;
+            font-size: .82rem;
+            font-weight: 650
+        }
 
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
+        .info-nav a:hover {
+            background: #e6f2fa
+        }
 
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
+        @media(max-width:760px) {
 
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
+            .info-feature,
+            .info-feature.reverse,
+            .info-gallery {
+                grid-template-columns: 1fr
+            }
 
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
+            .info-feature.reverse .info-copy {
+                order: 2
+            }
 
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-
-		.btn-hover-effect {
-			display: inline-block;
-			padding: 12px 28px;
-			margin-bottom: 1em;
-			margin-right: 1em;
-			font-size: 16px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #100f0f;
-			background: linear-gradient(135deg, #f0d104, #cece04);
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.btn-hover-effect a {
-			color: black;
-		}
-
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(233, 217, 4, 0.3);
-		}
-
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg,
-					transparent,
-					rgba(255, 255, 255, 0.2),
-					transparent);
-			transition: left 0.5s;
-		}
-
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-	</style>
-
+            .info-panel {
+                padding: 10px
+            }
+        }
+    </style>
 </head>
 
-<body class="fixed-header fixed-footer">
-
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="https://minhhale.github.io/graphic-designer/" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>
-				<li><a href="index.html">Main page</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/">Digital Designer</a></li>
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-
-
-		<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-
-		<!-- About -->
-		<section class="about" data-background="#fbfcfd">
-			<div class="container">
-				<div class="col-xl-12">
-					<h3>Infographic - Designing Clarity from Complexity</h3>
-					<p>As a graphic designer, I transform dense data and sensitive global issues into clear, accessible
-						visuals. Using tools like Adobe Creative Suite, Figma, and data-driven research, I craft infographics
-						that balance accuracy with visual storytelling. From concept sketch to final layout, my process
-						focuses on distilling key insights, selecting impactful typography and color, and guiding
-						viewers through complex narratives with empathy and precision.</p>
-
-				</div>
-		</section>
-		<!-- Impact -->
-		<section class="bg-lines">
-			<div class="container py-6">
-
-				<div class="row no-gutters" style="gap:2em">
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 1em;">
-					<img src="img/isometric-graphic.jpg" alt="isometric-design" width="100%">
-					<hr style="height: 1em;">
-					<h4>From Data to Action</h4>
-					<h5>Isometric Technical Illustration & Information Design</h5>
-					<p>A self-initiated technical visualization exploring how complex data moves from multiple sources through collection, secure processing, analysis, visualization, and decision-making. I developed the visual concept and information architecture to transform a complex technical workflow into a clear, engaging isometric narrative.</p>
-
-					<p><strong>Design Focus:</strong> Isometric Illustration • Technical Visualization • Information Design • Data Visualization • Iconography • Visual Storytelling</p>
-
-				</div>
-
-					<div class="col-md-6 mb-8">
-						<hr style="height: 1em;">
-						<img src="img/scientific-infographic-s.jpg" alt="Scientific Infographic — Visualizing Microplastic Pollution">
-					</div>
-
-					<div class="col-md-5 mb-6" gap="2em">
-						<h4>Scientific Infographic — Visualizing Microplastic Pollution</h4>
-
-						<h5>Environmental Science • Data Visualization • Information Design • Illustration</h5>
-						
-						<p>This self-directed scientific infographic explores how microplastics originate, move through environmental systems, and enter aquatic food webs.</p>
-
-						<p>The design transforms a complex scientific topic into an accessible visual narrative using information hierarchy, illustrated diagrams, environmental cross-sections, process visualization, iconography, and concise explanatory content.</p>
-
-						<p>My goal was to make technical information understandable to a general audience while maintaining scientific clarity and visual accuracy. The infographic demonstrates my approach to research-driven visual communication, scientific storytelling, information design, and data visualization.</p>
-
-					</div>					
-
-					<div class="col-md-6 mb-8">
-						<img src="img/respiratory-diseases-graphic.jpg" alt="respiratory diseases graphic">
-						<hr>
-						<hr class="style-eight">
-						<img src="img/understanding-pneumococcal-disease.jpg" alt="understanding pneumococcal disease">
-					
-						<br><br>
-
-					</div>
-
-
-					<div class="col-md-5 mb-6" gap="2em">
-						
-					<img src="img/coronavirus-factbox.jpg" alt="coronavirus factbox">
-						<hr>
-						<hr class="style-eight">
-						<img src="img/predictive.png" alt="predictive graphic">
-						<hr>
-						<hr class="style-eight">
-						<img src="img/charts.jpg" alt="charts graphic">
-						<br><br>
-
-					</div>
-
-					<div class="col-md-6 mb-8">
-						<hr style="height: 1em;">
-						<img src="img/5-people-identified-in-the-iconic-photo.jpg"
-							alt="5 People Identified in the Iconic Photo of Uyghur Detainees in Xinjiang">
-					</div>
-
-					<div class="col-md-5 mb-6" gap="2em">
-						<h4>5 People Identified in the Iconic Photo of Uyghur Detainees in Xinjiang</h4>
-						<p>This Radio Free Asia (RFA) infographic reveals the human stories behind one of the most
-							widely shared images of Uyghur detainees in Xinjiang. Through investigative reporting and
-							community interviews, RFA identified five men photographed inside the Lop County detention
-							camp each with distinct personal backgrounds but all swept into China’s mass detention of
-							Uyghurs and other Muslim minorities.</p>
-
-						<p>Portraits and brief bios spotlight their lives before arrest a medical equipment
-							entrepreneur, a carpenter-mosque caretaker, a restaurant owner, a driver, and a jade trader.
-							None were linked to anti-government activity, but many were reportedly targeted for
-							religious practice or independent thought. The design contrasts close-up profiles with the
-							wide camp photo, reinforcing the scale of detention while centering individual identities.
-						</p>
-
-						<p>By combining investigative detail with clear visual storytelling, the graphic turns an
-							anonymous crowd into named individuals, underscoring the human cost of Xinjiang’s political
-							“re-education” campaign.</p>
-
-					</div>
-
-					<div class="col-xl-12">
-						<hr class="style-eight">
-					</div>
-
-					<div class="col-md-6 mb-8">
-						<hr style="height: 1em;">
-						<img src="img/Map-of-mosque-destruction-infographic.jpg"
-							alt="Mapping the Destruction of Uyghur Mosques and Shrines">
-					</div>
-
-
-					<div class="col-md-5 mb-6" gap="2em">
-						<h4>Mapping the Destruction of Uyghur Mosques and Shrines</h4>
-						<p>This infographic documents the systematic erasure of Uyghur religious heritage across
-							northwest China’s Xinjiang Uyghur Autonomous Region. Drawing on a Guardian–Bellingcat
-							investigation, it pinpoints eight historically significant mosques and shrines that were
-							demolished or severely damaged since 2016.</p>
-						<p>Sites like the 13th-century Keriya Heytkah Mosque and the 16th-century Karghiliq Mosque, once
-							central to Uyghur cultural life, are marked on a regional map alongside dates of
-							destruction.</p>
-						<p>The design combines a clean map with a chronological site list, making it easy to grasp both
-							geographic scale and historical loss. The stark red typography for “destroyed” dates
-							emphasizes the urgency and gravity of the campaign, while the photograph of a traditional
-							mosque at the bottom grounds the data in lived cultural heritage.</p>
-						<p>By merging investigative data with visual clarity, the graphic reveals how a policy of
-							religious repression translates into the physical disappearance of centuries-old landmarks,
-							reinforcing broader concerns over cultural suppression and human rights abuses in Xinjiang.
-						</p>
-					</div>
-
-					<div class="col-xl-12">
-						<hr class="style-eight">
-					</div>
-
-					<div class="col-md-6 mb-8">
-						<hr style="height: 1em;">
-						<img src="img/laos40Years.jpg" alt="Laos Marks 40 Years of Communist Rule">
-					</div>
-
-					<div class="col-md-5 mb-6" gap="2em">
-						<h4>Laos Marks 40 Years of Communist Rule</h4>
-						<p>This infographic commemorates the 40th anniversary of the Lao People’s Revolutionary Party’s
-							rise to power, illustrating the country’s economic progress, political challenges, and
-							regional ties. Using a clean circular layout, it organizes key facts into categories such as
-							history, economic improvements, debt-to-GDP ratios, and infrastructure investments, while
-							balancing government claims of stability with criticism of human rights restrictions.</p>
-
-						<p>Highlights include Laos’s milestones of joining ASEAN (1997) and the World Trade Organization
-							(2013), a decline in debt-to-GDP from over 51% to 44%, and the multi-billion-dollar railway
-							project linking Laos to China. The visual contrasts gains in peace and economic growth with
-							ongoing concerns about one-party rule, Vietnamese influence, and Chinese financing.</p>
-
-						<p>By combining maps, charts, and concise text, the graphic distills four decades of political
-							and economic transformation into an accessible snapshot, showing how Laos navigates
-							modernization while remaining tightly bound to its communist allies and constrained by debt
-							and limited freedoms.</p>
-					</div>
-
-
-					<div class="col-xl-12">
-						<hr class="style-eight">
-					</div>
-
-					<div class="col-md-6 mb-8">
-						<hr style="height: 1em;">
-						<img src="img/laos-china-railroad.jpg" alt="Laos-China Railroad Project">
-					</div>
-
-					<div class="col-md-5 mb-6" gap="2em">
-						<h4>Laos–China Railway Project Details</h4>
-						<p>This infographic breaks down key statistics of the massive Laos–China railway construction,
-							offering a clear snapshot of scale, workforce, and engineering demands. It highlights the
-							leadership of Huang Difu, general manager of China Railway International, and notes that six
-							Chinese contractors are responsible for building the line across six segments. Over 50,000
-							workers, primarily from China, are employed on the project, underscoring the depth of
-							Chinese involvement.</p>
-
-						<p>The visual uses icons and bold numbers to convey the railway’s ambitious scope: a
-							single-track network with 33 stations (21 opening initially), 72 tunnels stretching 183.9
-							km—43% of the total length and 170 bridges covering 69.2 km, or nearly 16% of the route.
-							These details underscore the project’s engineering complexity and strategic significance for
-							regional connectivity.</p>
-
-						<p>By combining concise text with construction-themed graphics, the design communicates both the
-							technical scale and the geopolitical weight of a project that will reshape Laos’s
-							infrastructure and deepen its economic ties to China.</p>
-					</div>
-
-
-
-				</div>
-
-
-			</div>
-		</section>
-		<!-- Impact -->
-
-	<!-- Project Navigation -->
-		<!-- <div class="project-nav">
-			<div class="col-5">
-				<a href="graphics.html">
-					<small>Prev:</small>
-					<h6>Graphics Project</h6>
-				</a>
-			</div>
-			<div class="col-2 all-projects">
-			<a href="index.html" title="All Projects">
-					<i class="fa fa-home"></i>          
-					<h6>Home</h6>
-			</a>
-			</div>
-			<div class="col-5">
-				<a href="interactive.html">
-					<small>Next:</small>
-					<h6>Interactive Project</h6>
-				</a>
-			</div>
-		</div> -->
-		<!-- /Project Navigation -->
-
-		<!-- Sticky Back to Top -->
-		<span class="back-to-top">
-			<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-		</span>
-
-
-		<!-- Sticky Back to Top -->
-
-	</main>
-	<!-- /Main Content -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-
-			&nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-
-			&nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-		</div>
-
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+<body><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner"><a class="wordmark" href="index.html"
+                aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a>
+                <a
+                    href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>     
+                    <a href="index.html#contact">Contact</a></nav><a
+                class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk ↗</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="case-hero">
+            <div class="container">
+                <p class="eyebrow">SELECTED WORK / DATA VISUALIZATION & INFORMATION DESIGN</p>
+                <h1>Infographics & Information Design<span class="accent">.</span></h1>
+                <p class="hero-lead">Transforming complex subjects into clear, compelling visuals—from technical
+                    workflows and scientific explanations to investigative maps and editorial data storytelling.</p>
+                <div class="case-tags"><span>Infographic Design</span><span>Data Visualization</span><span>Isometric
+                        Illustration</span><span>Editorial Graphics</span></div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <div class="case-intro">
+                    <div>
+                        <p class="eyebrow">01 / PORTFOLIO OVERVIEW</p>
+                        <h2>Designing clarity from complexity.</h2>
+                        <p>My approach to information design combines research, structured storytelling, visual
+                            hierarchy, illustration, and careful use of color. Whether explaining a technical process or
+                            communicating a sensitive news story, I organize information to help audiences understand
+                            the central message quickly.</p>
+                        <p>This collection includes self-directed concepts, healthcare communications, and editorial
+                            graphics created for Radio Free Asia. The featured work below uses original project artwork.
+                        </p>
+                    </div>
+                    <dl class="case-facts">
+                        <div>
+                            <dt>Discipline</dt>
+                            <dd>Infographics & information design</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>Technical, scientific & editorial storytelling</dd>
+                        </div>
+                        <div>
+                            <dt>Formats</dt>
+                            <dd>Isometric graphics, maps, charts, explainers</dd>
+                        </div>
+                        <div>
+                            <dt>Tools</dt>
+                            <dd>Illustrator, Photoshop, Figma & data visualization</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="info-nav"><a href="#technical">Technical</a><a href="#science">Scientific</a><a
+                        href="#health">Healthcare</a><a href="#editorial">Editorial</a><a href="#regional">Maps &
+                        regional data</a></div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">02 / FEATURED WORK</p>
+                <h2>Visual storytelling across disciplines.</h2>
+                <p class="gallery-intro">A selection of original visuals demonstrating how different information
+                    structures call for different design solutions.</p>
+                <div class="info-gallery">
+                    <figure class="info-panel"><a href="#technical"><img src="img/isometric-graphic.webp"
+                                alt="Isometric data intelligence workflow infographic" loading="lazy"></a>
+                        <figcaption><strong>Technical information design.</strong> Data pipeline and decision-making
+                            workflow.</figcaption>
+                    </figure>
+                    <figure class="info-panel"><a href="#science"><img src="img/scientific-infographic.webp"
+                                alt="Microplastics scientific explainer" loading="lazy"></a>
+                        <figcaption><strong>Scientific storytelling.</strong> Microplastics and environmental pathways.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section" id="technical">
+            <div class="container">
+                <p class="eyebrow">03 / TECHNICAL INFORMATION DESIGN</p>
+                <h2>From Data to Action.</h2>
+                <p class="gallery-intro">A visual explanation of how information moves from satellite imagery, sensor
+                    networks, and open-source data through collection, secure processing, analysis, and decision-making.
+                    The connected isometric scenes make a multi-stage technical workflow easier to follow.</p>
+                <div class="info-feature">
+                    <figure class="info-panel"><a href="img/isometric-graphic.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/isometric-graphic.webp"
+                                alt="Data pipeline illustrated through isometric scenes, icons and directional connectors."
+                                loading="lazy"></a>
+                        <figcaption>Data pipeline illustrated through isometric scenes, icons and directional
+                            connectors. <a class="info-view" href="img/isometric-graphic.webp" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <div class="info-copy">
+                        <p class="info-kicker">Isometric technical illustration / Self-directed concept</p>
+                        <h3>Visualizing a connected process.</h3>
+                        <p>A visual explanation of how information moves from satellite imagery, sensor networks, and
+                            open-source data through collection, secure processing, analysis, and decision-making. The
+                            connected isometric scenes make a multi-stage technical workflow easier to follow.</p>
+                        <p class="info-note">Self-directed portfolio concept.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt" id="science">
+            <div class="container">
+                <p class="eyebrow">04 / SCIENTIFIC STORYTELLING</p>
+                <h2>From Plastic to Place.</h2>
+                <p class="gallery-intro">A research-informed visual narrative exploring the sources, movement, and
+                    environmental pathways of microplastics. Illustrated cross-sections, process diagrams, and labeled
+                    stages support understanding of a complex subject.</p>
+                <div class="info-feature">
+                    <figure class="info-panel"><a href="img/scientific-infographic.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/scientific-infographic.webp"
+                                alt="Scientific infographic explaining microplastics in waterways, wildlife, and the food chain."
+                                loading="lazy"></a>
+                        <figcaption>Scientific infographic explaining microplastics in waterways, wildlife, and the food
+                            chain. <a class="info-view" href="img/scientific-infographic.webp" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <div class="info-copy">
+                        <p class="info-kicker">Environmental infographic / Self-directed concept</p>
+                        <h3>Making the story easier to navigate.</h3>
+                        <p>A research-informed visual narrative exploring the sources, movement, and environmental
+                            pathways of microplastics. Illustrated cross-sections, process diagrams, and labeled stages
+                            support understanding of a complex subject.</p>
+                        <p class="info-note">Self-directed portfolio concept.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section" id="health">
+            <div class="container">
+                <p class="eyebrow">05 / HEALTH & DATA COMMUNICATION</p>
+                <h2>Respiratory health and data clarity.</h2>
+                <p class="gallery-intro">A selection of healthcare visuals translating medical and respiratory-health
+                    information into accessible diagrams, concise statistics, and more legible data displays.</p>
+                <div class="info-feature">
+                    <figure class="info-panel"><a href="img/respiratory-diseases-graphic.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/respiratory-diseases-graphic.webp"
+                                alt="Respiratory diseases infographic with pictograms, health data and audience-oriented diagrams."
+                                loading="lazy"></a>
+                        <figcaption>Respiratory diseases infographic with pictograms, health data and audience-oriented
+                            diagrams. <a class="info-view" href="img/respiratory-diseases-graphic.webp"
+                                target="_blank" rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <div class="info-copy">
+                        <p class="info-kicker">Healthcare information design</p>
+                        <h3>Making the story easier to navigate.</h3>
+                        <p>A selection of healthcare visuals translating medical and respiratory-health information into
+                            accessible diagrams, concise statistics, and more legible data displays.</p>
+                        <p class="info-note">Portfolio sample shown for visual communication and information-design
+                            purposes.</p>
+                    </div>
+                </div>
+                <div class="info-gallery">
+                    <figure class="info-panel"><a href="img/understanding-pneumococcal-disease.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/understanding-pneumococcal-disease.webp"
+                                alt="Pneumococcal disease parent education infographic" loading="lazy"></a>
+                        <figcaption>Pneumococcal disease parent education infographic. <a class="info-view"
+                                href="img/understanding-pneumococcal-disease.webp" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <figure class="info-panel"><a href="img/predictive.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/predictive.webp"
+                                alt="Before and after predictive respiratory intelligence data presentation"
+                                loading="lazy"></a>
+                        <figcaption>Before and after predictive respiratory intelligence data presentation. <a
+                                href="img/predictive.webp" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <figure class="info-panel"><a href="img/charts.jpg"
+                            target="_blank" rel="noopener noreferrer"><img
+                                src="img/charts.jpg"
+                                alt="Two healthcare and air quality charts" loading="lazy"></a>
+                        <figcaption>Two healthcare and air quality charts. <a class="info-view"
+                                href="img/charts.jpg" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <figure class="info-panel"><a href="img/coronavirus-factbox.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/coronavirus-factbox.webp"
+                                alt="Historical coronavirus explainer from RFA" loading="lazy"></a>
+                        <figcaption>Historical coronavirus explainer from RFA. <a class="info-view"
+                                href="img/coronavirus-factbox.webp" target="_blank" rel="noopener noreferrer">View
+                                full image ↗</a></figcaption>
+                    </figure>
+                </div>
+                <p class="info-note">Historical public-health graphics are presented as design samples, not current
+                    medical guidance.</p>
+            </div>
+        </section>
+        <section class="case-section alt" id="editorial">
+            <div class="container">
+                <p class="eyebrow">06 / EDITORIAL INFORMATION DESIGN</p>
+                <h2>People behind the photograph.</h2>
+                <p class="gallery-intro">A portrait-led infographic identifying five Uyghur men in a widely circulated
+                    detention-camp photograph. Profiles, annotations, and the original photograph connect individual
+                    stories with a larger reported event.</p>
+                <div class="info-feature">
+                    <figure class="info-panel"><a href="img/five-uyghur-detainees.webp" target="_blank"
+                            ><img  src="img/five-uyghur-detainees.webp"
+                                alt="RFA infographic identifying five men photographed in a detention camp in Xinjiang."
+                                loading="lazy"></a>
+                        <figcaption>RFA infographic identifying five men photographed in a detention camp in Xinjiang.
+                            <a class="info-view" href="img/five-uyghur-detainees.webp" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <div class="info-copy">
+                        <p class="info-kicker">Radio Free Asia / Editorial infographic</p>
+                        <h3>Making the story easier to navigate.</h3>
+                        <p>A portrait-led infographic identifying five Uyghur men in a widely circulated detention-camp
+                            photograph. Profiles, annotations, and the original photograph connect individual stories
+                            with a larger reported event.</p>
+                        <p class="info-note">Portfolio sample shown for visual communication and information-design
+                            purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section" id="mapping">
+            <div class="container">
+                <p class="eyebrow">07 / MAPS & INVESTIGATIVE GRAPHICS</p>
+                <h2>Mapping religious heritage loss.</h2>
+                <p class="gallery-intro">A geographic overview of mosques and shrines reported destroyed or damaged in
+                    Xinjiang. The design pairs map markers with a site-by-site list to connect location, historical
+                    context, and reported dates.</p>
+                <div class="info-feature">
+                    <figure class="info-panel"><a
+                            href="img/map-of-mosque-destruction-infographic.jpg"
+                            target="_blank" rel="noopener noreferrer"><img
+                                src="img/map-of-mosque-destruction-infographic.jpg"
+                                alt="Map of Xinjiang with locations and descriptions of damaged or destroyed mosques and shrines."
+                                loading="lazy"></a>
+                        <figcaption>Map of Xinjiang with locations and descriptions of damaged or destroyed mosques and
+                            shrines. <a class="info-view"
+                                href="img/map-of-mosque-destruction-infographic.jpg"
+                                target="_blank" rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <div class="info-copy">
+                        <p class="info-kicker">Radio Free Asia / Editorial map</p>
+                        <h3>Making the story easier to navigate.</h3>
+                        <p>A geographic overview of mosques and shrines reported destroyed or damaged in Xinjiang. The
+                            design pairs map markers with a site-by-site list to connect location, historical context,
+                            and reported dates.</p>
+                        <p class="info-note">Portfolio sample shown for visual communication and information-design
+                            purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt" id="regional">
+            <div class="container">
+                <p class="eyebrow">08 / REGIONAL DATA STORYTELLING</p>
+                <h2>Laos: politics, economy, and infrastructure.</h2>
+                <p class="gallery-intro">Two complementary editorial graphics combine maps, timelines, charts, icons,
+                    and infrastructure statistics to explain political and economic developments in Laos and the scope
+                    of the Laos–China railway project.</p>
+                <div class="info-feature">
+                    <figure class="info-panel"><a href="img/laos40Years.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/laos40Years.webp"
+                                alt="Editorial infographic marking forty years of communist rule in Laos."
+                                loading="lazy"></a>
+                        <figcaption>Editorial infographic marking forty years of communist rule in Laos. <a
+                                class="info-view" href="img/laos40Years.webp" target="_blank"
+                                rel="noopener noreferrer">View full image ↗</a></figcaption>
+                    </figure>
+                    <div class="info-copy">
+                        <p class="info-kicker">Radio Free Asia / Editorial infographics</p>
+                        <h3>Making the story easier to navigate.</h3>
+                        <p>Two complementary editorial graphics combine maps, timelines, charts, icons, and
+                            infrastructure statistics to explain political and economic developments in Laos and the
+                            scope of the Laos–China railway project.</p>
+                        <p class="info-note">Portfolio sample shown for visual communication and information-design
+                            purposes.</p>
+                    </div>
+                </div>
+                <div class="info-gallery">
+                    <figure class="info-panel"><a href="img/laos-china-railroad.webp" target="_blank"
+                            rel="noopener noreferrer"><img src="img/laos-china-railroad.webp"
+                                alt="Laos-China railway project statistics infographic" loading="lazy"></a>
+                        <figcaption><strong>Laos–China Railway.</strong> Construction scale, workforce, tunnels,
+                            bridges, and stations.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-next">
+            <div class="container">
+                <p class="eyebrow">EXPLORE MORE WORK</p>
+                <h2>See how these principles extend to presentation design.</h2>
+                <p><a href="powerpoint.html">Executive Presentations & Visual Storytelling ↗</a> &nbsp; · &nbsp; <a
+                        href="branding.html">Branding & Corporate Identity ↗</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a><a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>        
+                    <a
+                    href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© 2026 Minh-Ha Le</p>
+        </div>
+    </footer>
 </body>
 
 </html>
