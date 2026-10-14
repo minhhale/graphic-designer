@@ -1,429 +1,245 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - Branding</title>
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 15+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/branding.jpg">
-
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 15+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/branding.jpg">
-	<!-- end: Facebook Open Graph -->
-
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 15+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/graphic-designer/img/branding.jpg">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/">
-
-
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
-
-
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
-
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
-
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
-
-		@keyframes float {
-
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
-
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
-
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
-
-		@keyframes pulse-glow {
-
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
-
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
-
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
-
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
-
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-
-		.btn-hover-effect {
-			display: inline-block;
-			padding: 12px 28px;
-			margin-bottom: 1em;
-			margin-right: 1em;
-			font-size: 16px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #100f0f;
-			background: linear-gradient(135deg, #f0d104, #cece04);
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.btn-hover-effect a {
-			color: black;
-		}
-
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(233, 217, 4, 0.3);
-		}
-
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg,
-					transparent,
-					rgba(255, 255, 255, 0.2),
-					transparent);
-			transition: left 0.5s;
-		}
-
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-	</style>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">         
+    <meta name="description"
+        content="Lionchase North America brand identity and investor communications case study by Minh-Ha Le, Senior Graphic Designer.">
+    <title>Brand Identity & Investor Communications | Minh-Ha Le</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fixed-header fixed-footer">
-
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="https://minhhale.github.io/graphic-designer/" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>
-				<li><a href="index.html">Main page</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/">Digital Designer</a></li>
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-
-
-		<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-
-		<!-- About -->
-		<section class="about" data-background="#fbfcfd">
-			<div class="container">
-				<div class="col-xl-12">
-					<h3>Branding & Newsletter Design</h3>
-					<p><strong>In today’s fast-paced digital landscape</strong>, a strong brand identity is more than
-						just a logo or color scheme — it’s the essence of how a company communicates its values,
-						mission, and personality to the world. I specialize in creating cohesive brand identities that
-						resonate with target audiences and stand out in competitive markets.</p>
-
-					<p><strong>Tools I use:</strong> Adobe Creative Cloud (Illustrator, Photoshop, InDesign, After
-						Effects), Figma, Adobe Firefly, Midjourney (for AI-assisted concept exploration), and Notion or
-						Miro for collaborative moodboarding and strategy mapping.</p>
-				</div>
-		</section>
-		<!-- Impact -->
-		<section class="bg-lines">
-			<div class="container py-6">
-
-				<div class="row no-gutters" style="gap:2em">
-
-					<div class="col-md-6 mb-8">
-
-						<img src="img/lionchase-branding.jpg" alt="lionchase branding">
-
-						<br><br>
-						<h4>🦁 Lionchase North America - Brand Identity & Investor Communications System</h4>
-
-						<h5>✦ Project Overview</h5>
-
-						<p>As part of Lionchase North America’s transformation of its investor-relations communications,
-							I led the <strong>development of a cohesive brand identity system</strong> and the design of
-							its flagship publication - <em>Lionchase IR Insights.</em></p>
-
-						<p>The goal was to create a <strong>modern, data-driven visual language</strong> that conveys
-							confidence, innovation, and institutional trust — bridging the gap between <strong>private
-								equity tradition and emerging healthtech ventures.</strong></p>
-						<hr>
-						<hr class="style-eight">
-
-						<img src="img/lionchase-2.jpg" alt="lionchase newsletter design">
-						<img src="img/lionchase-3.jpg" alt="lionchase newsletter design">
-
-
-					</div>
-
-					<div class="col-md-5 mb-6" gap="2em">
-						<img src="img/lionchase-1.jpg" alt="lionchase newsletter design">
-						<br><br>
-
-						<h4>📰 Lionchase IR Insights — Investor Relations Newsletter</h4>
-
-						<h5>Client</h5>
-						<p>Lionchase North America <br> Role: Lead Designer <br>Date: October 2025</p>
-						<h5>Tools:</h5>
-						<p>Adobe InDesign · Illustrator · Photoshop · Figma · Adobe Firefly / Midjourney (AI imagery)
-						</p>
-						<h5>Deliverables</h5>
-						<p>Interactive PDF · HTML Email · Social Teasers</p>
-
-
-						<h5>✦ Elevating Investor Communications Through Design</h5>
-
-						<p>Lionchase North America launched <em>IR Insights</em> to modernize how investors receive
-							strategic updates and portfolio performance reports.</p>
-
-						<p>I designed the inaugural <strong>Edition 01 (October 2025)</strong> to blend
-							<strong>institutional polish</strong> with <strong>approachable storytelling,</strong>
-							bridging business intelligence and visual clarity. The publication introduces a new era of
-							transparency, insight, and opportunity for Lionchase’s investor community.
-						</p>
-
-						<h5>🎯 Design Objectives</h5>
-
-						<ul>
-							<li>• Establish a Modern Brand Identity for investor communications.</li>
-							<li>• Highlight Portfolio Achievements through clean, data-driven storytelling.</li>
-							<li>• Ensure Accessibility across print, PDF, and HTML email formats.</li>
-						</ul>
-
-						<h5>🎨 Visual System</h5>
-
-						<p>A blue–white–gray palette and geometric sans-serif typography (Inter / Source Sans) convey
-							professionalism and clarity.
-							Modular grid layouts and contrast-checked color pairings ensure WCAG 2.1 AA compliance and
-							effortless readability across devices.</p>
-
-						<p><strong>Color Palette</strong></p>
-						<ul>
-							<li>• Deep Blue #0F3C63</li>
-							<li>• Ice White #F6F9FC</li>
-							<li>• Slate Gray #7A8CA1</li>
-						</ul>
-
-
-						<h5>♿ Accessibility & Structure</h5>
-
-						<p>Each section - <strong>From the Desk, Feature Spotlight, IR Insight, and Portfolio
-								Pulse</strong> was built on a <strong>modular, scalable system</strong> that allows
-							future editions to expand seamlessly.</p>
-
-						<ul>
-							<li>• Contrast ratios verified ≥ 4.5 : 1</li>
-							<li>• Logical reading order for screen readers</li>
-							<li>• Text-to-background pairings optimized for dark/light modes</li>
-						</ul>
-
-						<h5>🤖 AI-Generated Imagery Disclosure</h5>
-
-						<p>All hero and supporting visuals were <strong>AI-assisted compositions</strong>, created using
-							<strong>Adobe Firefly</strong> and <strong>Midjourney V6</strong>, then refined in
-							<strong>Photoshop</strong> for accuracy and consistency with the Lionchase brand palette.
-						</p>
-
-						<p>AI imagery was used to:</p>
-
-						<ul>
-							<li>• Illustrate technology-driven partnerships (Healthmetryx × Samsung)</li>
-							<li>• Visualize enterprise-scale innovation themes</li>
-							<li>• Maintain confidentiality for pre-release products while achieving a polished,
-								photoreal aesthetic</li>
-						</ul>
-
-						<h5>📊 Outcome & Impact</h5>
-
-						<ul>
-							<li>• Created a <strong>reusable newsletter framework</strong> for quarterly investor
-								updates</li>
-							<li>• Reinforced Lionchase’s brand credibility and institutional readiness</li>
-							<li>• Improved investor engagement with <strong>clear, actionable design</strong></li>
-							<li>• Received positive feedback for accessibility, layout clarity, and visual tone</li>
-						</ul>
-
-
-
-					</div>
-
-				</div>
-
-
-			</div>
-		</section>
-		<!-- Impact -->
-		<!-- Project Navigation -->
-		<!-- <div class="project-nav">
-			<div class="col-5">
-				<a href="maps.html">
-					<small>Prev:</small>
-					<h6>Maps Project</h6>
-				</a>
-			</div>
-			<div class="col-2 all-projects">
-				<a href="index.html" title="All Projects">
-					<i class="fa fa-home"></i>
-					<h6>Home</h6>
-				</a>
-			</div>
-			<div class="col-5">
-				<a href="logo.html">
-					<small>Next:</small>
-					<h6>Logo Project</h6>
-				</a>
-			</div>
-		</div> -->
-		<!-- /Project Navigation -->
-
-
-		<!-- Sticky Back to Top -->
-		<span class="back-to-top">
-			<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-		</span>
-
-
-	</main>
-	<!-- /Main Content -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-
-			&nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-
-			&nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-		</div>
-		<!-- /Social/Contact Links -->
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="wordmark" href="index.html" aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="index.html#work">Work</a>
+                <a href="index.html#about">About</a>
+                <a href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX ↗</a>
+                <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>                        
+                <a href="index.html#contact">Contact</a></nav>
+            <a class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk ↗</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="case-hero">
+            <div class="container">
+                <p class="eyebrow">SELECTED WORK / BRAND IDENTITY & EDITORIAL DESIGN</p>
+                <h1>Lionchase - Investor Communications System<span class="accent">.</span></h1>
+                <p class="hero-lead">A cohesive, accessible visual language for investor updates—bringing clarity,
+                    consistency, and institutional polish to complex financial and portfolio communications.</p>
+                <div class="case-tags"><span>Brand Identity</span><span>Editorial Design</span><span>Investor
+                        Newsletter</span><span>Digital Communications</span></div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <div class="case-intro">
+                    <div>
+                        <p class="eyebrow">01 / PROJECT OVERVIEW</p>
+                        <h2>Building trust through visual clarity.</h2>
+                        <p>At Lionchase North America, I led the visual design of an investor communications system
+                            centered on the inaugural <em>Lionchase IR Insights</em> publication. The objective was to
+                            present strategic updates and portfolio information in a credible, modern, and
+                            easy-to-navigate format.</p>
+                        <p>The resulting design system brought a consistent visual approach to the newsletter,
+                            interactive PDF, HTML email, and social teasers.</p>
+                    </div>
+                    <dl class="case-facts">
+                        <div>
+                            <dt>Client</dt>
+                            <dd>Lionchase North America</dd>
+                        </div>
+                        <div>
+                            <dt>Role</dt>
+                            <dd>Lead Designer</dd>
+                        </div>
+                        <div>
+                            <dt>Published</dt>
+                            <dd>October 2025</dd>
+                        </div>
+                        <div>
+                            <dt>Deliverables</dt>
+                            <dd>Interactive PDF, HTML email, social teasers</dd>
+                        </div>
+                        <div>
+                            <dt>Tools</dt>
+                            <dd>InDesign, Illustrator, Photoshop, Figma, Firefly, Midjourney</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">02 / FEATURED WORK</p>
+                <h2>Investor communications, thoughtfully designed.</h2>
+                <p class="gallery-intro">A selection of original Lionchase work, from the inaugural IR Insights cover to
+                    editorial storytelling, feature articles, and investor email communications.</p>
+                <div class="work-gallery">
+                    <figure class="feature gallery-panel"><img src="img/lionchase-newsletter.webp"
+                            alt="Lionchase IR Insights October 2025 cover featuring a gold lion and flowing gold lines"
+                            width="1545" height="2000" fetchpriority="high">
+                        <figcaption><strong>01 / Publication cover.</strong> A distinctive navy-and-gold editorial
+                            identity for the inaugural investor newsletter.</figcaption>
+                    </figure>
+                    <figure class="side gallery-panel"><img src="img/lionchase-branding.webp"
+                            alt="Lionchase brand guideline showing lion logo, typography recommendations and gold, navy and blue color palette"
+                            width="600" height="1138" loading="lazy">
+                        <figcaption><strong>02 / Brand guidelines.</strong> Logo treatment, voice, typography hierarchy,
+                            modular layouts, and color specifications.</figcaption>
+                    </figure>
+                    <figure class="half gallery-panel"><img src="img/lionchase-2.webp"
+                            alt="Lionchase newsletter feature about Healthmetryx and Samsung partnership with glowing respiratory illustration"
+                            width="1545" height="2000" loading="lazy">
+                        <figcaption><strong>03 / Feature spotlight.</strong> Editorial hierarchy paired with a
+                            technology-focused illustration.</figcaption>
+                    </figure>
+                    <figure class="half gallery-panel"><img src="img/lionchase-1.webp"
+                            alt="Lionchase investor relations letter with a large title and navy-and-gold visual dividers"
+                            width="1545" height="2000" loading="lazy">
+                        <figcaption><strong>04 / Investor letter.</strong> Readable typography, confident spacing, and
+                            consistent brand elements.</figcaption>
+                    </figure>
+                    <figure class="half gallery-panel"><img src="img/lionchase-3.webp"
+                            alt="Lionchase IR Insight page with strategic partnerships article and luminous globe image"
+                            width="1545" height="2000" loading="lazy">
+                        <figcaption><strong>05 / Insight and portfolio updates.</strong> A modular layout for detailed
+                            investor information.</figcaption>
+                    </figure>
+                    <figure class="half gallery-panel"><img src="img/healthmetryx-newsletter-103025.webp"
+                            alt="Healthmetryx investor email newsletter with respiratory technology illustration, section headings and call-to-action buttons"
+                            width="841" height="2048" loading="lazy">
+                        <figcaption><strong>06 / Digital email extension.</strong> Related portfolio-company
+                            communication demonstrating cross-channel production.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">03 / CREATIVE APPROACH</p>
+                <h2>A scalable system, not just a single publication.</h2>
+                <div class="case-grid">
+                    <article class="case-card"><span class="eyebrow">01 / HIERARCHY</span>
+                        <h3>Clear information architecture</h3>
+                        <p>Structured content into recognizable sections—including From the Desk, Feature Spotlight, IR
+                            Insight, and Portfolio Pulse—to help investors scan and navigate updates.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">02 / CONSISTENCY</span>
+                        <h3>Reusable visual components</h3>
+                        <p>Established modular grids, repeatable layouts, and consistent typography for future investor
+                            communications across formats.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">03 / ACCESSIBILITY</span>
+                        <h3>Designed for readability</h3>
+                        <p>Considered color contrast, logical reading order, and readable type treatments across PDF and
+                            email experiences.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">04 / VISUAL IDENTITY</p>
+                <h2>Built for trust and clarity.</h2>
+                <p>The brand guidelines pair Lion Gold with Midnight Navy, Tech Blue, Graphite Gray, and Sage White.
+                    Editorial serif accents create a premium investor-relations tone, while accessible sans-serif text
+                    and monospaced data treatments keep information easy to scan.</p>
+                <div class="palette">
+                    <div class="swatch">
+                        <div class="swatch-color" style="background:#C99A28"></div><span>Lion Gold · #C99A28</span>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background:#0C1A2A"></div><span>Midnight Navy · #0C1A2A</span>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background:#2E7FA9"></div><span>Tech Blue · #2E7FA9</span>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background:#4F5866"></div><span>Graphite · #4F5866</span>
+                    </div>
+                    <div class="swatch">
+                        <div class="swatch-color" style="background:#F7F9FA"></div><span>Sage White · #F7F9FA</span>
+                    </div>
+                </div>
+                <p><strong>Type system:</strong> Playfair Display / Source Serif Pro for editorial headlines; Inter /
+                    Source Sans Pro for body copy; IBM Plex Mono for metrics.</p>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">05 / PRODUCTION</p>
+                <h2>Designed across channels.</h2>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <h3>Interactive PDF</h3>
+                        <p>Editorial publication design with structured sections and clear information hierarchy.</p>
+                    </article>
+                    <article class="case-card">
+                        <h3>HTML email</h3>
+                        <p>Brand-consistent investor updates designed for digital distribution.</p>
+                    </article>
+                    <article class="case-card">
+                        <h3>Social teasers</h3>
+                        <p>Adaptable promotional assets extending the publication's visual language.</p>
+                    </article>
+                </div>
+                <p class="case-note">AI-assisted imagery was created with Adobe Firefly and Midjourney and refined in
+                    Photoshop. It supported conceptual technology visuals while protecting pre-release information.</p>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">06 / OUTCOME</p>
+                <h2>More engaging investor communications.</h2>
+                <p>The project delivered a reusable framework for quarterly investor updates and a more unified brand
+                    experience across investor-facing materials.</p>
+                <div class="case-result"><strong>+31%</strong>
+                    <p>Reported improvement in newsletter engagement during my Lionchase work. Add the specific
+                        measurement period and metric definition before treating this as a project-specific result.</p>
+                </div>
+                <div class="case-actions"><a class="button button-primary" href="index.html#work">← Back to Selected
+                        Work</a><a class="button button-outline"
+                        href="mailto:minhhadc@gmail.com?subject=Portfolio%20inquiry">Discuss a Project ↗</a></div>
+            </div>
+        </section>
+        <section class="case-next">
+            <div class="container">
+                <p class="eyebrow">EXPLORE MORE</p>
+                <h2>More selected work</h2>
+                <p><a href="powerpoint.html">Executive Presentations ↗</a> &nbsp; · &nbsp; <a
+                        href="infographics.html">Infographics & Data Visualization ↗</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development Portfolio ↗</a>     
+                    <a
+                    href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© 2026 Minh-Ha Le</p>
+        </div>
+    </footer>
 </body>
 
 </html>
