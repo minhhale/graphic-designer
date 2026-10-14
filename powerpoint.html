@@ -1,397 +1,366 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - PowerPoint Presentations</title>
-<meta name="description" content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/powerpoint.html">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/powerpoint.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">         
+    <meta name="description"
+        content="Executive presentation, PowerPoint, and infographic design by Minh-Ha Le, Senior Graphic Designer.">
+    <title>Executive Presentations & Visual Storytelling | Minh-Ha Le</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific additions only; all shared styling comes from branding.html's original styles.css */
+        .presentation-preview {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+            gap: 24px;
+            align-items: center;
+            margin-top: 28px
+        }
 
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/powerpoint.html">
-	<meta property="og:image" content="https://minhhale.github.io/graphic-designer/img/powerpoint.jpg">
-	<!-- end: Facebook Open Graph -->
+        .presentation-preview img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid #dce5ed;
+            background: #fff
+        }
 
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/graphic-designer/img/powerpoint.jpg">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/powerpoint.html">
+        .presentation-copy {
+            padding: 10px 0
+        }
 
+        .presentation-copy h3 {
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin: 0 0 12px
+        }
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .presentation-copy p {
+            font-size: .95rem
+        }
 
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
+        .presentation-copy .button {
+            margin-top: 10px
+        }
 
+        .presentation-tile {
+            border: 1px solid #dbe4ed;
+            background: #fff;
+            border-radius: 9px;
+            padding: 28px;
+            min-height: 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between
+        }
 
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
+        .presentation-tile .eyebrow {
+            margin-bottom: 12px
+        }
 
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
+        .presentation-tile h3 {
+            font-size: 1.35rem;
+            line-height: 1.25;
+            color: var(--navy);
+            margin: 0 0 10px
+        }
 
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
+        .presentation-tile p {
+            font-size: .91rem;
+            margin: 0 0 20px
+        }
 
-		@keyframes float {
+        .presentation-tile .button {
+            margin-top: auto
+        }
 
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
+        .presentation-label {
+            font-size: .76rem;
+            font-weight: 750;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            color: var(--blue)
+        }
 
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
+        .presentation-number {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            color: #cbdbe6;
+            margin: 0 0 12px
+        }
 
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
+        .case-section .work-gallery .feature img {
+            max-height: 650px
+        }
 
-		@keyframes pulse-glow {
+        .case-section .work-gallery .side img {
+            max-height: 650px
+        }
 
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
+        @media(max-width:760px) {
+            .presentation-preview {
+                grid-template-columns: 1fr
+            }
 
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
-
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
-
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
-
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-
-		.btn-hover-effect {
-			display: inline-block;
-			padding: 12px 28px;
-			margin-bottom: 1em;
-			margin-right: 1em;
-			font-size: 16px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #100f0f;
-			background: linear-gradient(135deg, #f0d104, #cece04);
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.btn-hover-effect a {
-			color: black;
-		}
-
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(233, 217, 4, 0.3);
-		}
-
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg,
-					transparent,
-					rgba(255, 255, 255, 0.2),
-					transparent);
-			transition: left 0.5s;
-		}
-
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-	</style>
-
+            .presentation-tile {
+                min-height: 0
+            }
+        }
+    </style>
 </head>
 
-<body class="fixed-header fixed-footer">
-
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="https://minhhale.github.io/graphic-designer/" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>
-				<li><a href="index.html">Main page</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/">Digital Designer</a></li>
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-
-
-		<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-
-		<!-- About -->
-		<section class="about" data-background="#fbfcfd">
-			<div class="container">
-				<div class="col-xl-12">
-					<h3>Corporate Presentation & Infographic Design Portfolio</h3>
-					<p>A collection of <strong> executive-level presentations and one-page infographics</strong> that blend design precision with storytelling clarity. Each piece transforms complex data and strategies into <strong>cohesive, brand-aligned visuals</strong> that communicate key messages effectively. Focused on professionalism, clarity, and impact, these works demonstrate how thoughtful design can elevate corporate communication and decision-making.</p>
-				</div>
-			</div>
-		</section>
-		<!-- Impact -->
-		<section class="bg-lines">
-			<div class="container py-6">
-
-				
-				<div class="col-xl-12 mb-8">
-
-					<h4>Northstar Technologies — Executive Presentation</h4>
-
-					<h5>Northstar 2027</h5>
-
-					<h5>Employee Experience & Innovation Strategy</h5>
-
-					<p>Northstar Technologies is a leading provider of advanced technology solutions, specializing in innovative software and hardware products that empower businesses to achieve operational excellence and drive digital transformation. <a href="https://minhhale.github.io/graphic-designer/img/northstar-ex-strategy.pdf" target="_blank">View full presentation</a></p>
-					
-					<p><em>All organizations, names and data shown in this concept are fictional and created solely for demonstration purposes.</em></p>
-
-					<br>
-					
-					<a href="https://minhhale.github.io/graphic-designer/img/northstar-ex-strategy.pdf" target="_blank"><img src="img/presentation-collage.jpg" alt="Employee Experience & Innovation Strategy" width="100%"></a>
-					<hr style="height: 1em">
-					<br>
-				</div>
-
-				<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>				
-
-				<div class="col-xl-12 mb-8">
-
-					<h4>Vestted Service Presentation</h4>
-
-					<p>Vestted Wealth Management is a next-generation fiduciary firm built to unite institutional discipline, intelligent infrastructure, and uncompromising client alignment. We serve private-market professionals, entrepreneurs, and families seeking the same level of precision, transparency, and strategic clarity expected by leading institutions.</p>
-
-					<br>
-					
-					<img src="img/vestted.gif" alt="vestted PowerPoint gif" width="100%">
-					<hr style="height: 1em">
-					<br>
-
-					<img src="img/vestted-pp-screenshot.png" alt="vestted-pp-screenshot" width="100%">
-
-
-				</div>
-
-				<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>
-
-				<div class="col-xl-12 mb-8">
-
-					<h4>Vestted Service Presentation</h4>
-					<br>
-					
-					<img src="img/vestted-service.gif" alt="vestted service gif" width="100%">
-					<hr style="height: 1em">
-					<br>
-					
-					<img src="img/vestted-service-screenshot.png" alt="vestted service screenshot" width="100%">
-
-
-				</div>
-
-				<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>
-
-				<div class="col-xl-12 mb-8">
-
-					<h4>Vestted Insights Presentation</h4>	
-
-					<br>
-					<img src="img/vestted-insights.gif" alt="vestted-insights-gif" width="100%">
-					
-					<hr style="height: 1em">
-					<br>
-
-					<img src="img/vestted-insights-screenshot.png" alt="vestted-insights-screenshot" width="100%">
-
-
-				</div>
-
-								<div class="col-xl-12">
-					<hr class="style-eight">
-				</div>
-
-				<div class="col-xl-12 mb-8">
-
-					<h4>1 page Infographic</h4>	
-
-					<br>
-					<img src="img/growing-infographic.gif" alt="growing-infographic-gif" width="100%">
-					
-					<hr style="height: 1em">
-					<br>
-
-					<img src="img/growing-infographic-screenshot.png" alt="growing-infographic-screenshot" width="100%">
-
-
-				</div>
-
-			</div>
-		</section>
-		<!-- Impact -->
-
-
-		<!-- Project Navigation -->
-		<!-- <div class="project-nav">
-			<div class="col-5">
-				<a href="newsletters.html">
-					<small>Prev:</small>
-					<h6>Newsletters Project</h6>
-				</a>
-			</div>
-			<div class="col-2 all-projects">
-			<a href="index.html" title="All Projects">
-					<i class="fa fa-home"></i>          
-					<h6>Home</h6>
-			</a>
-			</div>
-			<div class="col-5">
-				<a href="graphics.html">
-					<small>Next:</small>
-					<h6>Graphics Project</h6>
-				</a>
-			</div>
-		</div> -->
-		<!-- /Project Navigation -->
-
-		<!-- Sticky Back to Top -->
-		<span class="back-to-top justify-content-center text-center	">
-			<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-		</span>
-
-
-	</main>
-	<!-- /Main Content -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-
-			&nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-			
-			&nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-
-
-		</div>
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="wordmark" href="index.html" aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a
+                    href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>        
+                    <a href="index.html#contact">Contact</a></nav>
+            <a class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk ↗</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="case-hero">
+            <div class="container">
+                <p class="eyebrow">SELECTED WORK / PRESENTATION DESIGN & INFORMATION DESIGN</p>
+                <h1>Executive Presentations & Visual Storytelling<span class="accent">.</span></h1>
+                <p class="hero-lead">Strategic presentations and information graphics that turn complex ideas into
+                    clear, engaging narratives—designed for executive audiences, stakeholder communications, and digital
+                    storytelling.</p>
+                <div class="case-tags"><span>PowerPoint Design</span><span>Executive Storytelling</span><span>Data
+                        Visualization</span><span>Visual Communications</span></div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <div class="case-intro">
+                    <div>
+                        <p class="eyebrow">01 / PORTFOLIO OVERVIEW</p>
+                        <h2>Clarity, hierarchy, and a story worth following.</h2>
+                        <p>From strategy decks to financial-services presentations and concise infographics, this
+                            selection highlights a presentation design approach grounded in purposeful visual hierarchy,
+                            brand consistency, and audience-focused communication.</p>
+                        <p>Each piece is designed to help viewers understand the message quickly, follow the narrative,
+                            and focus on the information that matters.</p>
+                    </div>
+                    <dl class="case-facts">
+                        <div>
+                            <dt>Discipline</dt>
+                            <dd>Presentation & information design</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>Executive and stakeholder communications</dd>
+                        </div>
+                        <div>
+                            <dt>Formats</dt>
+                            <dd>Strategy decks, service presentations, infographics</dd>
+                        </div>
+                        <div>
+                            <dt>Skills</dt>
+                            <dd>Storytelling, layout systems, data visualization</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">02 / FEATURED PRESENTATION</p>
+                <h2>Northstar Technologies — Employee Experience & Innovation Strategy.</h2>
+                <p class="gallery-intro">A self-initiated, fictional executive communications concept exploring how
+                    strategic priorities, employee engagement metrics, and an implementation roadmap can become a
+                    cohesive, easy-to-follow presentation.</p>
+                <div class="presentation-preview">
+                    <figure style="margin:0"><img src="img/presentation-collage.webp"
+                            alt="Northstar presentation collage showing branded executive communication slides"
+                            width="1600" height="1280" fetchpriority="high"></figure>
+                    <div class="presentation-copy">
+                        <p class="presentation-label">Executive strategy / concept project</p>
+                        <h3>From organizational priorities to a visual narrative.</h3>
+                        <p>The ten-page deck presents strategic priorities, employee engagement statistics, innovation
+                            data, and a 2026 roadmap through a consistent branded system.</p><a
+                            class="button button-primary" href="img/northstar-ex-strategy.pdf" target="_blank"
+                            rel="noopener noreferrer">View full presentation ↗</a>
+                        <p class="case-note">Concept project: organizations, names, and data are fictional. The PDF link
+                            uses the existing website asset path.</p>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <figure class="half gallery-panel"><img src="img/brand-presentation.webp"
+                            alt="Northstar branded presentation design with blue visual identity" loading="lazy"
+                            width="1600" height="900">
+                        <figcaption><strong>01 / Branded slide design.</strong> Cohesive visual language supporting
+                            executive-level communication.</figcaption>
+                    </figure>
+                    <figure class="half gallery-panel"><img src="img/we-chart-the-path.webp"
+                            alt="Northstar branded visual reading We Chart the Path" loading="lazy" width="1600"
+                            height="900">
+                        <figcaption><strong>02 / Campaign storytelling.</strong> A complementary visual demonstrating
+                            the broader brand system.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">03 / PRESENTATION COLLECTION</p>
+                <h2>Vestted — Financial-services presentations.</h2>
+                <p class="gallery-intro">A selection of branded PowerPoint work for Vestted, translating advisory
+                    services, market perspectives, and investment positioning into engaging presentation formats.</p>
+                <div class="presentation-preview">
+                    <figure class="gallery-panel" style="margin:0"><img src="img/vestted-pp-screenshot.webp"
+                            alt="Vestted Wealth Advisors slide showing AI-enhanced advisory insight and private equity advantages"
+                            loading="lazy">
+                        <figcaption><strong>01 / Corporate presentation.</strong> A navy-and-gold visual system for
+                            communicating complex financial-services ideas.</figcaption>
+                    </figure>
+                    <div class="presentation-copy">
+                        <p class="presentation-label">Vestted / Brand presentation</p>
+                        <h3>Strategy, positioning, and a consistent visual identity.</h3>
+                        <p>Dark navy backgrounds, precise gold accents, technical imagery, and concise content create a
+                            cohesive story across the presentation.</p>
+                    </div>
+                </div>
+                <div class="presentation-preview">
+                    <figure class="gallery-panel" style="margin:0"><img src="img/vestted-service-screenshot.webp"
+                            alt="Vestted service presentation with illustrated advisory and allocation series slides"
+                            loading="lazy">
+                        <figcaption><strong>02 / Services overview.</strong> Illustrated slide layouts and a distinctive
+                            circular navigation motif.</figcaption>
+                    </figure>
+                    <div class="presentation-copy">
+                        <p class="presentation-label">Vestted / Service presentation</p>
+                        <h3>Making advisory services approachable.</h3>
+                        <p>Illustrated characters, a consistent blue palette, and structured messaging help organize the
+                            firm's service offerings into a memorable visual sequence.</p>
+                    </div>
+                </div>
+                <div class="presentation-preview">
+                    <figure class="gallery-panel" style="margin:0"><img src="img/vestted-insights.gif"
+                            alt="Animated preview of Vestted Insights presentation" loading="lazy">
+                        <figcaption><strong>03 / Insights presentation.</strong> Animated preview of a
+                            thought-leadership information design.</figcaption>
+                    </figure>
+                    <div class="presentation-copy">
+                        <p class="presentation-label">Vestted / Insights &amp; intelligence</p>
+                        <h3>Thought leadership, made scannable.</h3>
+                        <p>Information is organized into clearly labeled categories, supported by icons and a central
+                            overlapping-circle graphic.</p>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <figure class="half gallery-panel"><img src="img/vestted-insights-screenshot.webp"
+                            alt="Vestted Insights slide with market perspectives, the Vestted View, research snapshots, and white paper library"
+                            loading="lazy">
+                        <figcaption><strong>Insights slide detail.</strong> Hierarchy, icons, and supporting
+                            descriptions.</figcaption>
+                    </figure>
+                    <figure class="half gallery-panel"><img src="img/powerpoint.webp"
+                            alt="Collage of original Vestted presentation slides" loading="lazy">
+                        <figcaption><strong>Presentation collection.</strong> A coordinated family of financial-services
+                            slides.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">04 / INFORMATION DESIGN</p>
+                <h2>Strategic growth — one-page infographic.</h2>
+                <p class="gallery-intro">A single-slide information graphic using directional arrows, color, and icons
+                    to connect strategic vision with operational excellence, investment selection, collaboration, and
+                    ethical practices.</p>
+                <div class="presentation-preview">
+                    <figure class="gallery-panel" style="margin:0"><img src="img/growing-infographic.gif"
+                            alt="Animated strategic growth infographic with upward arrows and four strategic priorities"
+                            loading="lazy">
+                        <figcaption><strong>Animated infographic.</strong> Motion reinforces the visual direction and
+                            narrative.</figcaption>
+                    </figure>
+                    <div class="presentation-copy">
+                        <p class="presentation-label">PowerPoint / Information design</p>
+                        <h3>One visual. Multiple strategic priorities.</h3>
+                        <p>Distinct arrow paths bring related ideas together in a central visual while keeping each
+                            supporting message readable.</p>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <figure class="feature gallery-panel"><img src="img/growing-infographic-screenshot.webp"
+                            alt="PowerPoint editing view of strategic vision and innovation infographic" loading="lazy">
+                        <figcaption><strong>Static infographic view.</strong> The original PowerPoint design shown in
+                            context.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">05 / DESIGN APPROACH</p>
+                <h2>Presentation design built for decision-making.</h2>
+                <div class="case-grid">
+                    <article class="case-card"><span class="eyebrow">01 / STORY</span>
+                        <h3>Audience-first narrative</h3>
+                        <p>Shape information into a logical sequence that supports the intended message and audience.
+                        </p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">02 / SYSTEM</span>
+                        <h3>Reusable design language</h3>
+                        <p>Use consistent typography, spacing, imagery, and branded components across slides.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">03 / CLARITY</span>
+                        <h3>Accessible visual hierarchy</h3>
+                        <p>Balance concise copy, clear labeling, contrast, and data presentation to improve readability.
+                        </p>
+                    </article>
+                </div>
+                <div class="case-actions"><a class="button button-primary" href="index.html#work">← Back to Selected
+                        Work</a><a class="button button-outline"
+                        href="mailto:minhhadc@gmail.com?subject=Presentation%20design%20inquiry">Discuss a Project ↗</a>
+                </div>
+            </div>
+        </section>
+        <section class="case-next">
+            <div class="container">
+                <p class="eyebrow">EXPLORE MORE</p>
+                <h2>More selected work</h2>
+                <p><a href="branding.html">Brand Identity & Investor Communications ↗</a> &nbsp; · &nbsp; <a
+                        href="northstar.html">Northstar Brand Identity ↗</a> &nbsp; · &nbsp; <a
+                        href="infographics.html">Infographics & Data Visualization ↗</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a><a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>        
+                    <a
+                    href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© 2026 Minh-Ha Le</p>
+        </div>
+    </footer>
 </body>
 
 </html>
