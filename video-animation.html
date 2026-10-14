@@ -1,354 +1,299 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Minh-Ha Le - Video Animation</title>
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/svg+xml" href="img/logo.png" />
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/core.css">
-	<link rel="stylesheet" href="css/theme.css">
-	<!-- for Google -->
-	<meta name="description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta name="keywords"
-		content="Minh-Ha Le, UI/UX Designer, Visual Designer, Web Developer, Multimedia Specialist, Digital Experiences, Human-Centered Design, Portfolio">
-	<meta property="url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102b47">
+    <meta name="author" content="Minh-Ha Le">
+    <meta name="keywords" content="Social Media, Campaign Design, Digital Content, Graphic Design, Minh-Ha Le">
+    <meta name="robots" content="index, follow">
+      <link rel="icon" type="image/svg+xml" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">         
+    <meta name="description"
+        content="Motion graphics, video animation and editorial storytelling by Minh-Ha Le, Senior Graphic Designer.">
+    <title>Video & Motion Design | Minh-Ha Le</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .motion-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #0b2035;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(9, 33, 57, .12)
+        }
 
-	<!-- start: Facebook Open Graph -->
-	<meta property="og:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="og:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="og:type" content="News">
-	<meta property="og:url" content="https://minhhale.github.io/graphic-designer/">
-	<meta property="og:image" content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
-	<!-- end: Facebook Open Graph -->
+        .motion-frame video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain
+        }
 
-	<!-- for Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@minhhadc_minhha">
-	<meta name="twitter:creator" content="@minhhadc_minhha">
-	<meta property="twitter:title" content="Minh-Ha Le - Graphic Designer & Visual Storyteller">
-	<meta property="twitter:description"
-		content="An award-winning visual storyteller with 18+ years of experience turning complex ideas into clear, engaging visuals.">
-	<meta property="twitter:image"
-		content="https://minhhale.github.io/special-reports/graphics/assets/img/minhha-sej.jpg">
-	<meta name="twitter:url" content="https://minhhale.github.io/graphic-designer/">
+        .motion-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block
+        }
 
+        .motion-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 30px
+        }
 
+        .motion-item {
+            margin: 0;
+            min-width: 0
+        }
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X5H3JDSXSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+        .motion-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #eef3f7;
+            border: 1px solid #dce5ed
+        }
 
-		gtag('config', 'G-X5H3JDSXSM');
-	</script>
+        .motion-item figcaption {
+            font-size: .9rem;
+            color: #51667a;
+            line-height: 1.6;
+            margin-top: 12px
+        }
 
+        .motion-item h3 {
+            margin: 0 0 8px;
+            color: #102b47
+        }
 
-	<style>
-		.floating-animation {
-			animation: float 6s ease-in-out infinite;
-		}
+        .motion-intro {
+            max-width: 780px
+        }
 
-		.floating-animation-delayed {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -2s;
-		}
+        .motion-link {
+            color: #27678f;
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
 
-		.floating-animation-delayed-2 {
-			animation: float 6s ease-in-out infinite;
-			animation-delay: -4s;
-		}
+        .motion-feature {
+            margin-top: 30px
+        }
 
-		@keyframes float {
+        .motion-note {
+            color: #52697c;
+            font-size: .9rem;
+            line-height: 1.7;
+            margin-top: 16px
+        }
 
-			0%,
-			100% {
-				transform: translateY(0px) rotate(0deg);
-			}
+        @media(max-width:900px) {
+            .motion-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
 
-			50% {
-				transform: translateY(-20px) rotate(2deg);
-			}
-		}
-
-		.pulse-glow {
-			animation: pulse-glow 3s ease-in-out infinite;
-		}
-
-		@keyframes pulse-glow {
-
-			0%,
-			100% {
-				opacity: 0.6;
-				transform: scale(1);
-			}
-
-			50% {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-		}
-
-		.slide-in-left {
-			animation: slideInLeft 1s ease-out;
-		}
-
-		.slide-in-right {
-			animation: slideInRight 1s ease-out 0.3s both;
-		}
-
-		@keyframes slideInLeft {
-			from {
-				opacity: 0;
-				transform: translateX(-50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-		@keyframes slideInRight {
-			from {
-				opacity: 0;
-				transform: translateX(50px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateX(0);
-			}
-		}
-
-
-		.btn-hover-effect {
-			display: inline-block;
-			padding: 12px 28px;
-			margin-bottom: 1em;
-			margin-right: 1em;
-			font-size: 16px;
-			font-weight: bold;
-			text-transform: uppercase;
-			color: #100f0f;
-			background: linear-gradient(135deg, #f0d104, #cece04);
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.btn-hover-effect a {
-			color: black;
-		}
-
-		.btn-hover-effect:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 10px 25px rgba(233, 217, 4, 0.3);
-		}
-
-		.btn-hover-effect::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -100%;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(90deg,
-					transparent,
-					rgba(255, 255, 255, 0.2),
-					transparent);
-			transition: left 0.5s;
-		}
-
-		.btn-hover-effect:hover::before {
-			left: 100%;
-		}
-
-		/* Responsive YouTube Video */
-		.video-container {
-			position: relative;
-			width: 100%;
-			height: 0;
-			padding-bottom: 56.25%; /* 16:9 aspect ratio */
-			overflow: hidden;
-			border-radius: 8px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		}
-
-		.video-container iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border: 0;
-		}
-	</style>
-
+        @media(max-width:600px) {
+            .motion-gallery {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
 </head>
 
-<body class="fixed-header fixed-footer">
+<body><a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner"><a class="wordmark" href="index.html"
+                aria-label="Minh-Ha Le, home"><strong>MINH-HA LE</strong><small>SENIOR GRAPHIC DESIGNER · VISUAL COMMUNICATIONS</small></a>
+            <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a
+                    href="https://minhhale.github.io/digital-designer/" target="_blank"
+                    rel="noopener noreferrer">Digital / UX ↗</a>
+                <a href="https://minhhale.github.io/" target="_blank"
+                    rel="noopener noreferrer">Web Development <span aria-hidden="true">↗</span></a>                      
+                    <a href="index.html#contact">Contact</a></nav><a
+                class="header-contact" href="mailto:minhhadc@gmail.com">Let's Talk ↗</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="case-hero">
+            <div class="container">
+                <p class="eyebrow">SELECTED WORK / VIDEO &amp; MOTION GRAPHICS</p>
+                <h1>Video &amp; Motion Storytelling<span class="accent">.</span></h1>
+                <p class="hero-lead">Bringing complex stories to life through purposeful animation, editorial visuals,
+                    and digital video.</p>
+                <div class="case-tags"><span>Motion Graphics</span><span>Video Editing</span><span>Visual
+                        Storytelling</span><span>Adobe After Effects</span><span>Adobe Premiere Pro</span></div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <div class="case-intro">
+                    <div>
+                        <p class="eyebrow">01 / PROJECT OVERVIEW</p>
+                        <h2>Designing stories in motion.</h2>
+                        <p>Motion design adds pacing, clarity, and emotion to digital communications. This collection
+                            brings together a website video banner for Vestted, animated editorial illustrations, and an
+                            RFA explainer on South China Sea territorial claims, showing how movement can support brand
+                            messaging and make information more engaging.</p>
+                    </div>
+                    <div class="case-facts">
+                        <div><span>DISCIPLINE</span><strong>Motion design &amp; video</strong></div>
+                        <div><span>FORMATS</span><strong>Website video · Animated GIFs · Editorial explainer</strong>
+                        </div>
+                        <div><span>TOOLS</span><strong>After Effects · Premiere Pro</strong></div>
+                        <div><span>FOCUS</span><strong>Brand &amp; editorial storytelling</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">02 / FEATURED VIDEO</p>
+                <h2><a href="https://vestted.com/" target="_blank">Vestted</a> — website video banner.</h2>
+                <p class="motion-intro">A video-led brand experience for Vestted's website, designed to introduce the
+                    business with a contemporary visual tone. Watch the original video below.</p>
 
-	<!-- Preloader -->
-	<div id="preloader"></div>
-
-	<!-- Header -->
-	<header id="header">
-
-		<!-- Logo -->
-		<a href="https://minhhale.github.io/graphic-designer/" class="logo">
-			<img src="img/logo.png" class="logo-light" alt="">
-		</a>
-
-		<!-- Mobile Menu Icon -->
-		<a href="#" class="mob-menu">
-			<span></span><span></span><span></span>
-		</a>
-
-		<!-- Navigation -->
-		<nav class="navigation onepage">
-			<ul>
-				<li><a href="index.html">Main page</a></li>
-				<li><a href="https://minhhale.github.io/digital-designer/">Digital Designer</a></li>
-				<li><a href="https://docs.google.com/document/d/1XXFu9mcJjcn8ifG3DRXgOQv4i16gmTrq/edit?usp=sharing&ouid=117668276822143382538&rtpof=true&sd=true"
-						target="_blank">Resume</a></li>
-			</ul>
-		</nav>
-		<!-- /Navigation -->
-
-
-	</header>
-	<!-- /Header -->
-
-	<!-- Main Content -->
-	<main id="main">
-
-
-
-		<!-- Scroll Down Line -->
-		<a href="#" class="scroll-down"><span></span></a>
-
-		<!-- About -->
-		<section class="about" data-background="#fbfcfd">
-			<div class="container">
-				<div class="col-xl-12">
-					<h3>Video Animation</h3>
-					<p>I create captivating video animations that bring stories to life. By leveraging tools like Adobe After Effects and Adobe Premiere Pro, I craft visually stunning narratives that engage audiences and convey complex ideas with clarity and impact.</p>
-
-				</div>
-			</div>
-		</section>
-		<!-- Impact -->
-		<section class="bg-lines">
-			<div class="container">
-
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 5rem;">
-					<h4>Video Banner <a href="https://vestted.com/" target="_blank">Vestted Website</a></h4>
-					<div class="video-container">
-						<iframe src="https://www.youtube.com/embed/fiMl8c88-Ok?si=V2ieig52dcmh-sLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					</div>
-
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row no-gutter">
-
-
-					<!-- Lower House -->
-
-					<div class="col-lg-4">
-						<hr>
-						
-						<hr style="height: 2rem;">
-					<img src="img/army-personnel-life-insurance-and-money-combine.gif" alt="army-personnel-life-insurance-and-money-combine"
-							style="width:100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-bottom: 1rem;">
-				</div>
-
-									<div class="col-lg-4">
-						<hr>
-						
-						<hr style="height: 2rem;">
-					<img src="img/money-bag.gif" alt="money-bag"
-							style="width:100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-bottom: 1rem;">
-				</div>
-
-									<div class="col-lg-4">
-						<hr>
-					
-						<hr style="height: 2rem;">
-					<img src="img/kolay-wife-and-son.gif" alt="kolay-wife-and-son"
-							style="width:100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; margin-bottom: 1rem;">
-				</div>
-					<!-- Upper House -->
-
-				</div>
-			</div>
-
-			<div class="container py-6">
-				<div class="col-xl-12 mb-8">
-					<hr style="height: 3em">
-					<video class="pgi-video" controls preload="metadata" poster="img/infographic-video.png" alt="
-					infographic-video">
-						<source src="img/infographic-video.mp4" type="video/mp4">
-						<source src="img/infographic-video.webm" type="video/webm">
-					</video>
-					<hr style="height: 1em">
-
-				</div>
-		</div>
-
-		</section>
-		<!-- Impact -->
-
-		<hr style="height: 5rem;">
-
-		<!-- Sticky Back to Top -->
-		<span class="back-to-top">
-			<a href="#main" style="text-decoration: none; color: #000;">⬆ Back to top</a>
-		</span>
-
-
-
-	</main>
-	<!-- /Main Content -->
-
-
-	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Copyright -->
-		<small>&copy; Minh-Ha Le 2025</small>
-
-		<!-- Social/Contact Links -->
-		<div class="small text-links">
-			Tel: 202-277-0216 &nbsp; | &nbsp; minhhadc@gmail.com &nbsp; | &nbsp;
-
-			&nbsp;<a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank">LinkedIn</a>
-			&nbsp; &nbsp;<a href="https://minhhale.github.io/digital-designer/" target="_blank">Digital Portfolio</a>
-			&nbsp; &nbsp;<a href="https://minhhale.github.io/" target="_blank">Web Developer Portfolio</a>
-		</div>
-
-	</footer>
-	<!-- /Footer -->
-
-	<!-- JS -->
-	<script src="js/core.js"></script>
-	<script src="js/theme.js"></script>
-
-
+                    <div class="motion-frame"><video controls preload="metadata" playsinline
+                            poster="img/thumb-video-animation.webp"
+                            aria-label="Vestted website video banner ">
+                            <source src="img/vested-wealth.webm" type="video/webm">
+                            <source src="img/vested-wealth.mp4" type="video/mp4">Your browser does not support
+                            HTML5 video. 
+                        </video></div>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">03 / ANIMATED EDITORIAL WORK</p>
+                <h2>Small moments, clearer stories.</h2>
+                <p class="motion-intro">A selection of animated illustrations created for visual storytelling. The
+                    original GIFs remain animated on this page.</p>
+                <div class="motion-gallery">
+                    <figure class="motion-item"><img src="img/army-personnel-life-insurance-and-money-combine.gif"
+                            alt="Animated illustration combining military personnel, life insurance and money themes"
+                            loading="lazy">
+                        <figcaption><strong>01 / Military, insurance &amp; finance.</strong> An editorial animation
+                            combining multiple concepts into one visual narrative.</figcaption>
+                    </figure>
+                    <figure class="motion-item"><img src="img/money-bag.gif" alt="Animated illustration of a money bag"
+                            loading="lazy">
+                        <figcaption><strong>02 / Money bag.</strong> A compact animated financial illustration designed
+                            to add movement and emphasis.</figcaption>
+                    </figure>
+                    <figure class="motion-item"><img src="img/kolay-wife-and-son.gif"
+                            alt="Animated editorial illustration featuring a man, his wife and their son"
+                            loading="lazy">
+                        <figcaption><strong>03 / Family story.</strong> A character-based animation supporting
+                            human-centered editorial storytelling.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">04 / EDITORIAL EXPLAINER VIDEO</p>
+                <h2>South China Sea — competing territorial claims.</h2>
+                <p class="motion-intro">An animated Radio Free Asia infographic explaining the countries involved in
+                    overlapping territorial claims in the South China Sea. The original video is available below with
+                    playback controls.</p>
+                <div class="motion-feature">
+                    <div class="motion-frame"><video controls preload="metadata" playsinline
+                            poster="img/infographic-video.png"
+                            aria-label="RFA South China Sea territorial claims animated explainer">
+                            <source src="img/infographic-video.webm" type="video/webm">
+                            <source src="img/infographic-video.mp4" type="video/mp4">Your browser does not support
+                            HTML5 video. 
+                        </video></div>
+                </div>
+                <p class="motion-note">RFA editorial infographic video · <a class="motion-link"
+                        href="img/infographic-video.mp4" download>Download MP4 ↗</a></p>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">05 / CREATIVE APPROACH</p>
+                <h2>Motion with a purpose.</h2>
+                <div class="case-grid">
+                    <article class="case-card"><span class="eyebrow">01 / STORY</span>
+                        <h3>Start with the message</h3>
+                        <p>Choose the essential idea, then build a visual sequence that supports it.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">02 / DESIGN</span>
+                        <h3>Build visual consistency</h3>
+                        <p>Use illustration, color, composition, and typography to keep the work cohesive.</p>
+                    </article>
+                    <article class="case-card"><span class="eyebrow">03 / MOTION</span>
+                        <h3>Guide attention</h3>
+                        <p>Use timing, transitions, and emphasis to make each frame easy to follow.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section">
+            <div class="container">
+                <p class="eyebrow">06 / PROCESS &amp; TOOLS</p>
+                <h2>From visual concept to final animation.</h2>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <h3>Concept &amp; storyboarding</h3>
+                        <p>Define the narrative, plan visual transitions, and establish a clear sequence.</p>
+                    </article>
+                    <article class="case-card">
+                        <h3>Animation &amp; editing</h3>
+                        <p>Create motion graphics and refine the pacing with Adobe After Effects and Premiere Pro.</p>
+                    </article>
+                    <article class="case-card">
+                        <h3>Digital delivery</h3>
+                        <p>Prepare formats for websites and editorial publishing, balancing clarity and file
+                            performance.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="case-section alt">
+            <div class="container">
+                <p class="eyebrow">07 / OUTCOME</p>
+                <h2>Communicating beyond the static frame.</h2>
+                <p class="motion-intro">These examples demonstrate how animation can extend a brand's visual identity
+                    and help audiences connect with editorial subjects through movement, sequence, and visual emphasis.
+                </p>
+                <div class="case-actions"><a class="btn btn-primary" href="index.html#work">Explore More Work ↗</a><a
+                        class="btn btn-secondary" href="mailto:minhhadc@gmail.com">Discuss a Project ↗</a></div>
+            </div>
+        </section>
+        <section class="case-next">
+            <div class="container">
+                <p class="eyebrow">EXPLORE MORE</p>
+                <h2>More selected work</h2>
+                <p><a href="powerpoint.html">Executive Presentations ↗</a> &nbsp; · &nbsp; <a
+                        href="interactive.html">Interactive Data Visualizations ↗</a> &nbsp; · &nbsp; <a
+                        href="infographics.html">Infographics ↗</a></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div><strong>MINH-HA LE</strong><small>Senior Graphic Designer · Visual Communications</small></div>
+            <div class="footer-links"><a href="https://www.linkedin.com/in/minh-ha-le/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn ↗</a>
+                    <a href="https://minhhale.github.io/digital-designer/"
+                    target="_blank" rel="noopener noreferrer">Digital Portfolio ↗</a>
+                    <a href="https://minhhale.github.io/" target="_blank" rel="noopener noreferrer">Web Development ↗</a>
+                    <a href="mailto:minhhadc@gmail.com">Email ↗</a></div>
+            <p>© 2026 Minh-Ha Le</p>
+        </div>
+    </footer>
 </body>
 
 </html>
