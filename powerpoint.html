@@ -37,6 +37,16 @@
             background: #fff
         }
 
+        .presentation-preview video {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            border: 1px solid #dce5ed;
+            background: #102b47;
+        }
+
         .presentation-copy {
             padding: 10px 0
         }
@@ -120,6 +130,13 @@
                 min-height: 0
             }
         }
+
+        /* Expandable PDF preview for the visual communications deck */
+        .presentation-expand { margin-top: 28px; border: 1px solid #dbe4ed; border-radius: 9px; background: #fff; overflow: hidden; }
+        .presentation-expand summary { cursor: pointer; padding: 18px 22px; font-weight: 700; color: var(--navy); }
+        .presentation-expand summary:hover { background: #f3f7fa; }
+        .presentation-expand iframe { display: block; width: 100%; height: min(75vh, 760px); min-height: 420px; border: 0; }
+        .presentation-expand .case-note { padding: 0 22px 18px; }
     </style>
 </head>
 
@@ -220,9 +237,47 @@
                 </div>
             </div>
         </section>
+        <section class="case-section" id="visual-communications-presentation">
+            <div class="container">
+                <p class="eyebrow">03 / FEATURED INFOGRAPHIC PRESENTATION</p>
+                <h2>Strategic Visual Communications &amp; Brand Engagement.</h2>
+                <p class="gallery-intro">A self-initiated, 10-slide conceptual presentation exploring how brand strategy,
+                    consistent visual design, and integrated communications help organizations connect with audiences.
+                    Colorful process diagrams and structured information design make complex concepts easier to follow.</p>
+                <div class="presentation-preview">
+                    <figure class="gallery-panel" style="margin:0">
+                        <video controls playsinline preload="metadata"
+                            poster="img/strategic-visual-communications-cover.webp"
+                            aria-label="Play the Strategic Visual Communications and Brand Engagement presentation walkthrough">
+                            <source src="img/strategic-visual-communications-web.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                            <a href="img/strategic-visual-communications-web.mp4">Watch the presentation video</a>.
+                        </video>
+                        <figcaption><strong>Presentation video walkthrough.</strong> A 46-second overview of the 10-slide infographic-led communications concept.</figcaption>
+                    </figure>
+                    <div class="presentation-copy">
+                        <p class="presentation-label">PowerPoint / Concept presentation / 10 slides</p>
+                        <h3>From brand strategy to meaningful audience engagement.</h3>
+                        <p>Designed to showcase visual storytelling, communication frameworks, brand consistency,
+                            and accessible, audience-centered information design.</p>
+                        <a class="button button-primary" href="img/strategic-visual-communications.pdf"
+                            target="_blank" rel="noopener noreferrer">View full presentation ↗</a>
+                        <p class="case-note">Self-initiated portfolio concept; any example metrics are illustrative, not client results.</p>
+                    </div>
+                </div>
+                <details class="presentation-expand">
+                    <summary>Preview all 10 slides on this page</summary>
+                    <iframe src="img/strategic-visual-communications.pdf#toolbar=0"
+                        title="Strategic Visual Communications and Brand Engagement — 10-slide presentation"
+                        loading="lazy"></iframe>
+                    <p class="case-note">If the embedded viewer is unavailable on your device,
+                        <a href="img/strategic-visual-communications.pdf" target="_blank" rel="noopener noreferrer">open the PDF in a new tab</a>.</p>
+                </details>
+            </div>
+        </section>
         <section class="case-section">
             <div class="container">
-                <p class="eyebrow">03 / PRESENTATION COLLECTION</p>
+                <p class="eyebrow">04 / PRESENTATION COLLECTION</p>
                 <h2>Vestted — Financial-services presentations.</h2>
                 <p class="gallery-intro">A selection of branded PowerPoint work for Vestted, translating advisory
                     services, market perspectives, and investment positioning into engaging presentation formats.</p>
@@ -284,7 +339,7 @@
         </section>
         <section class="case-section alt">
             <div class="container">
-                <p class="eyebrow">04 / INFORMATION DESIGN</p>
+                <p class="eyebrow">05 / INFORMATION DESIGN</p>
                 <h2>Strategic growth — one-page infographic.</h2>
                 <p class="gallery-intro">A single-slide information graphic using directional arrows, color, and icons
                     to connect strategic vision with operational excellence, investment selection, collaboration, and
@@ -314,7 +369,7 @@
         </section>
         <section class="case-section">
             <div class="container">
-                <p class="eyebrow">05 / DESIGN APPROACH</p>
+                <p class="eyebrow">06 / DESIGN APPROACH</p>
                 <h2>Presentation design built for decision-making.</h2>
                 <div class="case-grid">
                     <article class="case-card"><span class="eyebrow">01 / STORY</span>
